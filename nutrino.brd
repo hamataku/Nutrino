@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="20" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -164,10 +164,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="160" y2="0" width="0" layer="20"/>
-<wire x1="160" y1="0" x2="160" y2="100" width="0" layer="20"/>
-<wire x1="160" y1="100" x2="0" y2="100" width="0" layer="20"/>
-<wire x1="0" y1="100" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="65" y2="0" width="0" layer="20"/>
+<wire x1="65" y1="0" x2="65" y2="50" width="0" layer="20"/>
+<wire x1="65" y1="50" x2="0" y2="50" width="0" layer="20"/>
+<wire x1="0" y1="50" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="Passive_Robotech">
@@ -288,20 +288,6 @@ grid 5 mm, outline 2.4 x 4.4 mm</description>
 <wire x1="-2.159" y1="1.524" x2="2.159" y2="1.524" width="0.127" layer="51"/>
 <wire x1="2.159" y1="-1.524" x2="-2.159" y2="-1.524" width="0.127" layer="51"/>
 </package>
-<package name="TOGGLESW_PANEL">
-<pad name="2" x="0" y="0" drill="2.5" shape="octagon"/>
-<pad name="1" x="0" y="4.7" drill="2.5" shape="octagon"/>
-<pad name="3" x="0" y="-4.7" drill="2.5" shape="octagon"/>
-<wire x1="-3.4" y1="6.2" x2="-3.4" y2="-6.2" width="0.127" layer="21"/>
-<wire x1="3.4" y1="6.2" x2="3.4" y2="-6.2" width="0.127" layer="21"/>
-<wire x1="-3.2" y1="-6.4" x2="3.2" y2="-6.4" width="0.127" layer="21"/>
-<circle x="0" y="0" radius="3.2649625" width="0.127" layer="21"/>
-<wire x1="-3.4" y1="6.2" x2="-3.2" y2="6.4" width="0.127" layer="21" curve="-67.380135"/>
-<wire x1="-3.2" y1="6.4" x2="3.2" y2="6.4" width="0.127" layer="21"/>
-<wire x1="3.2" y1="6.4" x2="3.4" y2="6.2" width="0.127" layer="21" curve="-67.380135"/>
-<wire x1="-3.2" y1="-6.4" x2="-3.4" y2="-6.2" width="0.127" layer="21" curve="-67.380135"/>
-<wire x1="3.4" y1="-6.2" x2="3.2" y2="-6.4" width="0.127" layer="21" curve="-67.380135"/>
-</package>
 <package name="NR10050T">
 <smd name="1" x="-4" y="0" dx="2.6" dy="4.5" layer="1"/>
 <smd name="2" x="4" y="0" dx="2.6" dy="4.5" layer="1"/>
@@ -369,6 +355,22 @@ grid 5 mm, outline 2.4 x 4.4 mm</description>
 <wire x1="0" y1="-7.6" x2="0" y2="-23" width="0.127" layer="21"/>
 <wire x1="0" y1="-23" x2="5" y2="-23" width="0.127" layer="21"/>
 <wire x1="5" y1="-23" x2="5" y2="-7.6" width="0.127" layer="21"/>
+</package>
+<package name="SS12D01G4">
+<pad name="P$1" x="-2.5" y="0" drill="0.8" diameter="1.27"/>
+<pad name="P$2" x="0" y="0" drill="0.8" diameter="1.27"/>
+<pad name="P$3" x="2.5" y="0" drill="0.8" diameter="1.27"/>
+<wire x1="-4.25" y1="-1.8" x2="-4.25" y2="1.8" width="0.127" layer="21"/>
+<wire x1="-4.25" y1="1.8" x2="4.25" y2="1.8" width="0.127" layer="21"/>
+<wire x1="4.25" y1="1.8" x2="4.25" y2="-1.8" width="0.127" layer="21"/>
+<wire x1="4.25" y1="-1.8" x2="-4.25" y2="-1.8" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="-0.75" x2="-1.75" y2="0.75" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="0.75" x2="1.75" y2="0.75" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="-0.75" x2="1.75" y2="-0.75" width="0.127" layer="21"/>
+<wire x1="1.75" y1="-0.75" x2="1.75" y2="0.75" width="0.127" layer="21"/>
+<rectangle x1="-1.75" y1="-0.75" x2="-0.25" y2="0.75" layer="21"/>
+<text x="-4.1275" y="2.2225" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.1275" y="-3.4925" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -788,9 +790,7 @@ Makoto Shimazu&lt;br&gt;
 <library name="rezzonics">
 <description>Rezzonics library</description>
 <packages>
-<package name="NUTUBE_6P1">
-<description>NUTUBE 6P1 Twin diode &lt;p&gt;
-&lt;a href=http://nutube.us/downloads/Nutube_Datasheet_31.pdf&gt;Datasheet&lt;/a&gt;</description>
+<package name="NUTUBE_6P1_1">
 <pad name="1" x="-16" y="-4" drill="1"/>
 <pad name="2" x="-14" y="-4" drill="1"/>
 <pad name="4" x="-10" y="-4" drill="1"/>
@@ -811,6 +811,30 @@ Makoto Shimazu&lt;br&gt;
 <text x="-21.5" y="12" size="1.27" layer="25">&gt;NAME</text>
 <text x="-21.5" y="10" size="1.27" layer="27">&gt;VALUE</text>
 <dimension x1="-16" y1="-4" x2="-22.5" y2="-2" x3="26.5" y3="-3" textsize="3.5" layer="47" dtype="vertical"/>
+<pad name="3" x="-12" y="-4" drill="1"/>
+<pad name="5" x="-8" y="-4" drill="1"/>
+<pad name="6" x="-6" y="-4" drill="1"/>
+<pad name="11" x="4" y="-4" drill="1"/>
+<pad name="12" x="6" y="-4" drill="1"/>
+<pad name="13" x="8" y="-4" drill="1"/>
+<pad name="15" x="12" y="-4" drill="1"/>
+</package>
+</packages>
+</library>
+<library name="Document_Robotech">
+<description>&lt;h3&gt;RoboTech EAGLE Library&lt;/h3&gt;
+Supply symbol library&lt;br&gt;
+$Rev: 16465 $ 
+&lt;p&gt;
+Since 2008&lt;br&gt;
+by RoboTech&lt;br&gt;
+Takuo Sawada&lt;br&gt;
+&lt;/p&gt;</description>
+<packages>
+<package name="HOLE_3.2">
+<hole x="0" y="0" drill="3.2"/>
+<circle x="0" y="0" radius="4" width="0.127" layer="51"/>
+<circle x="0" y="0" radius="3" width="0.127" layer="52"/>
 </package>
 </packages>
 </library>
@@ -1003,375 +1027,385 @@ Makoto Shimazu&lt;br&gt;
 </pass>
 </autorouter>
 <elements>
-<element name="100K" library="Passive_Robotech" package="2012-R" value="10k" x="-30.48" y="87.63" smashed="yes">
-<attribute name="NAME" x="-31.48" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-31.48" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="100K1" library="Passive_Robotech" package="2012-R" value="10k" x="-20.32" y="87.63" smashed="yes">
-<attribute name="NAME" x="-21.32" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-21.32" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C1" library="Passive_Robotech" package="2012-C" value="4.7u" x="-41.91" y="87.63" smashed="yes">
-<attribute name="NAME" x="-43.291" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-43.291" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C10" library="Passive_Robotech" package="2012-C" value="1u" x="-72.39" y="87.63" smashed="yes">
-<attribute name="NAME" x="-73.771" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-73.771" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C11" library="Passive_Robotech" package="2012-C" value="10p" x="-76.2" y="87.63" smashed="yes">
-<attribute name="NAME" x="-77.581" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-77.581" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C12" library="Passive_Robotech" package="2012-C" value="10p" x="-80.01" y="87.63" smashed="yes">
-<attribute name="NAME" x="-81.391" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-81.391" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C13" library="Passive_Robotech" package="2012-C" value="0.1u" x="-83.82" y="87.63" smashed="yes">
-<attribute name="NAME" x="-85.201" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-85.201" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C14" library="Passive_Robotech" package="2012-C" value="0.1u" x="-87.63" y="87.63" smashed="yes">
-<attribute name="NAME" x="-89.011" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-89.011" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C15" library="Passive_Robotech" package="2012-C" value="0.1u" x="-91.44" y="87.63" smashed="yes">
-<attribute name="NAME" x="-92.821" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-92.821" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C16" library="Passive_Robotech" package="3216" value="10u" x="-62.23" y="81.28" smashed="yes">
-<attribute name="NAME" x="-63.83" y="82.38" size="1.016" layer="25" font="vector"/>
-<attribute name="VALUE" x="-63.83" y="79.18" size="1.016" layer="27" font="vector"/>
-</element>
-<element name="C17" library="Passive_Robotech" package="2012-C" value="0.1u" x="-95.25" y="87.63" smashed="yes">
-<attribute name="NAME" x="-96.631" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-96.631" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C18" library="Passive_Robotech" package="2012-C" value="0.1u" x="-15.24" y="92.71" smashed="yes">
-<attribute name="NAME" x="-16.621" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-16.621" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C19" library="Passive_Robotech" package="2012-C" value="0.022u" x="-95.25" y="80.01" smashed="yes">
-<attribute name="NAME" x="-96.631" y="81.0628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-96.631" y="78.11" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C2" library="Passive_Robotech" package="2012-C" value="4.7u" x="-45.72" y="87.63" smashed="yes">
-<attribute name="NAME" x="-47.101" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-47.101" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C20" library="Passive_Robotech" package="2012-C" value="0.022u" x="-15.24" y="87.63" smashed="yes">
-<attribute name="NAME" x="-16.621" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-16.621" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C21" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="-62.23" y="64.77" smashed="yes">
-<attribute name="NAME" x="-59.182" y="66.802" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-59.182" y="61.595" size="1.27" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C22" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="-74.93" y="64.77" smashed="yes">
-<attribute name="NAME" x="-71.882" y="66.802" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-71.882" y="61.595" size="1.27" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="C23" library="Passive_Robotech" package="3216" value="10u" x="-67.31" y="81.28" smashed="yes">
-<attribute name="NAME" x="-68.91" y="82.38" size="1.016" layer="25" font="vector"/>
-<attribute name="VALUE" x="-68.91" y="79.18" size="1.016" layer="27" font="vector"/>
-</element>
-<element name="C24" library="Passive_Robotech" package="3216" value="10u" x="-72.39" y="81.28" smashed="yes">
-<attribute name="NAME" x="-73.99" y="82.38" size="1.016" layer="25" font="vector"/>
-<attribute name="VALUE" x="-73.99" y="79.18" size="1.016" layer="27" font="vector"/>
+<element name="R34" library="Passive_Robotech" package="2012-R" value="100k" x="58.928" y="40.894" smashed="yes" rot="R180">
+<attribute name="NAME" x="59.928" y="39.8412" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="59.928" y="42.794" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R33" library="Passive_Robotech" package="2012-R" value="100k" x="54.102" y="38.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="55.1548" y="39.1" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="52.202" y="39.1" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="C1" library="Passive_Robotech" package="2012-C" value="4.7u" x="12.446" y="28.702" smashed="yes" rot="R180">
+<attribute name="NAME" x="13.827" y="27.6492" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="13.827" y="30.602" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C10" library="Passive_Robotech" package="2012-C" value="1u" x="6.35" y="39.878" smashed="yes" rot="R180">
+<attribute name="NAME" x="7.731" y="38.8252" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="7.731" y="41.778" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C11" library="Passive_Robotech" package="2012-C" value="10p" x="3.048" y="8.382" smashed="yes">
+<attribute name="NAME" x="1.667" y="9.4348" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="1.667" y="6.482" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="C12" library="Passive_Robotech" package="2012-C" value="10p" x="3.302" y="15.494" smashed="yes" rot="R180">
+<attribute name="NAME" x="4.683" y="14.4412" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="4.683" y="17.394" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C13" library="Passive_Robotech" package="2012-C" value="0.1u" x="18.288" y="4.318" smashed="yes" rot="R180">
+<attribute name="NAME" x="19.669" y="3.2652" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="19.669" y="6.218" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C14" library="Passive_Robotech" package="2012-C" value="0.1u" x="-11.938" y="43.942" smashed="yes">
+<attribute name="NAME" x="-13.319" y="44.9948" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="-13.319" y="42.042" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="C15" library="Passive_Robotech" package="2012-C" value="0.1u" x="8.636" y="17.526" smashed="yes" rot="R180">
+<attribute name="NAME" x="10.017" y="16.4732" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="10.017" y="19.426" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C16" library="Passive_Robotech" package="3216" value="10u" x="13.462" y="17.78" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.062" y="16.68" size="1.016" layer="25" font="vector" rot="R180"/>
+<attribute name="VALUE" x="15.062" y="19.88" size="1.016" layer="27" font="vector" rot="R180"/>
+</element>
+<element name="C17" library="Passive_Robotech" package="2012-C" value="0.1u" x="17.526" y="17.018" smashed="yes" rot="R180">
+<attribute name="NAME" x="18.907" y="15.9652" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="18.907" y="18.918" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C18" library="Passive_Robotech" package="2012-C" value="0.1u" x="13.716" y="4.318" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.097" y="3.2652" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="15.097" y="6.218" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="C19" library="Passive_Robotech" package="2012-C" value="0.022u" x="20.066" y="29.21" smashed="yes" rot="MR0">
+<attribute name="NAME" x="21.447" y="30.2628" size="0.8128" layer="26" font="vector" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="21.447" y="27.31" size="0.8128" layer="28" font="vector" ratio="10" rot="MR0"/>
+</element>
+<element name="C2" library="Passive_Robotech" package="2012-C" value="4.7u" x="11.938" y="32.512" smashed="yes" rot="R270">
+<attribute name="NAME" x="12.9908" y="33.893" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="10.038" y="33.893" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="C20" library="Passive_Robotech" package="2012-C" value="0.022u" x="19.812" y="21.082" smashed="yes" rot="MR0">
+<attribute name="NAME" x="21.193" y="22.1348" size="0.8128" layer="26" font="vector" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="21.193" y="19.182" size="0.8128" layer="28" font="vector" ratio="10" rot="MR0"/>
+</element>
+<element name="C21" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="25.146" y="29.21" smashed="yes">
+<attribute name="NAME" x="28.194" y="31.242" size="1.27" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="28.194" y="26.035" size="1.27" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="C22" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="25.146" y="21.082" smashed="yes">
+<attribute name="NAME" x="28.194" y="23.114" size="1.27" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="28.194" y="17.907" size="1.27" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="C23" library="Passive_Robotech" package="3216" value="10u" x="35.052" y="42.418" smashed="yes" rot="R270">
+<attribute name="NAME" x="36.152" y="44.018" size="1.016" layer="25" font="vector" rot="R270"/>
+<attribute name="VALUE" x="32.952" y="44.018" size="1.016" layer="27" font="vector" rot="R270"/>
+</element>
+<element name="C24" library="Passive_Robotech" package="3216" value="10u" x="35.052" y="6.35" smashed="yes" rot="R90">
+<attribute name="NAME" x="33.952" y="4.75" size="1.016" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="37.152" y="4.75" size="1.016" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="C25" library="Passive_Robotech" package="2012-C" value="0.1u" x="-19.05" y="92.71" smashed="yes">
-<attribute name="NAME" x="-20.431" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-20.431" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C25" library="Passive_Robotech" package="2012-C" value="0.1u" x="36.322" y="46.99" smashed="yes" rot="R180">
+<attribute name="NAME" x="37.703" y="45.9372" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="37.703" y="48.89" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C26" library="Passive_Robotech" package="2012-C" value="0.1u" x="-22.86" y="92.71" smashed="yes">
-<attribute name="NAME" x="-24.241" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-24.241" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C26" library="Passive_Robotech" package="2012-C" value="0.1u" x="36.576" y="2.286" smashed="yes" rot="R180">
+<attribute name="NAME" x="37.957" y="1.2332" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="37.957" y="4.186" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C27" library="Passive_Robotech" package="2012-C" value="1u" x="-26.67" y="92.71" smashed="yes">
-<attribute name="NAME" x="-28.051" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-28.051" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C27" library="Passive_Robotech" package="2012-C" value="1u" x="20.574" y="8.89" smashed="yes" rot="R270">
+<attribute name="NAME" x="21.6268" y="10.271" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="18.674" y="10.271" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="C28" library="Passive_Robotech" package="2012-C" value="1u" x="-30.48" y="92.71" smashed="yes">
-<attribute name="NAME" x="-31.861" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-31.861" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C28" library="Passive_Robotech" package="2012-C" value="1u" x="19.812" y="30.734" smashed="yes" rot="R180">
+<attribute name="NAME" x="21.193" y="29.6812" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="21.193" y="32.634" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C29" library="Passive_Robotech" package="E2,5-7" value="10u" x="-54.61" y="73.66" smashed="yes">
-<attribute name="NAME" x="-51.562" y="75.692" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-51.562" y="70.485" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C29" library="Passive_Robotech" package="E2,5-7" value="10u" x="40.132" y="38.862" smashed="yes" rot="R270">
+<attribute name="NAME" x="42.164" y="35.814" size="1.27" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="36.957" y="35.814" size="1.27" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="C3" library="Passive_Robotech" package="2012-C" value="1000p" x="-25.4" y="87.63" smashed="yes">
-<attribute name="NAME" x="-26.781" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-26.781" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C3" library="Passive_Robotech" package="2012-C" value="1000p" x="15.24" y="37.338" smashed="yes">
+<attribute name="NAME" x="13.859" y="38.3908" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="13.859" y="35.438" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C30" library="Passive_Robotech" package="C050-024X044" value="0.012u FILM" x="-35.56" y="81.28" smashed="yes">
-<attribute name="NAME" x="-37.719" y="82.677" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-37.719" y="78.613" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C30" library="Passive_Robotech" package="C050-024X044" value="0.012u FILM" x="41.656" y="33.528" smashed="yes" rot="R180">
+<attribute name="NAME" x="43.815" y="32.131" size="1.27" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="43.815" y="36.195" size="1.27" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C31" library="Passive_Robotech" package="E2,5-7" value="10u" x="-64.77" y="73.66" smashed="yes">
-<attribute name="NAME" x="-61.722" y="75.692" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-61.722" y="70.485" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C31" library="Passive_Robotech" package="E2,5-7" value="10u" x="40.132" y="10.414" smashed="yes" rot="R90">
+<attribute name="NAME" x="38.1" y="13.462" size="1.27" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="43.307" y="13.462" size="1.27" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C32" library="Passive_Robotech" package="C050-024X044" value="0.012u FILM" x="-48.26" y="81.28" smashed="yes">
-<attribute name="NAME" x="-50.419" y="82.677" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-50.419" y="78.613" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C32" library="Passive_Robotech" package="C050-024X044" value="0.012u FILM" x="41.656" y="16.256" smashed="yes" rot="R180">
+<attribute name="NAME" x="43.815" y="14.859" size="1.27" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="43.815" y="18.923" size="1.27" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C33" library="Passive_Robotech" package="E2,5-7" value="10u" x="-74.93" y="73.66" smashed="yes">
-<attribute name="NAME" x="-71.882" y="75.692" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-71.882" y="70.485" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C33" library="Passive_Robotech" package="E2,5-7" value="10u" x="46.228" y="25.146" smashed="yes" rot="R90">
+<attribute name="NAME" x="44.196" y="28.194" size="1.27" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="49.403" y="28.194" size="1.27" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C34" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="-87.63" y="64.77" smashed="yes">
-<attribute name="NAME" x="-84.582" y="66.802" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-84.582" y="61.595" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C34" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="53.594" y="45.466" smashed="yes" rot="R90">
+<attribute name="NAME" x="51.562" y="48.514" size="1.27" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="56.769" y="48.514" size="1.27" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C35" library="Passive_Robotech" package="2012-C" value="0.0022u" x="-83.82" y="80.01" smashed="yes">
-<attribute name="NAME" x="-85.201" y="81.0628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-85.201" y="78.11" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C35" library="Passive_Robotech" package="2012-C" value="0.0022u" x="43.942" y="40.132" smashed="yes" rot="R90">
+<attribute name="NAME" x="42.8892" y="38.751" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="45.842" y="38.751" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C36" library="Passive_Robotech" package="2012-C" value="10p" x="-34.29" y="92.71" smashed="yes">
-<attribute name="NAME" x="-35.671" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-35.671" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C36" library="Passive_Robotech" package="2012-C" value="10p" x="55.118" y="40.894" smashed="yes">
+<attribute name="NAME" x="53.737" y="41.9468" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="53.737" y="38.994" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C37" library="Passive_Robotech" package="E2,5-7" value="220u" x="-33.02" y="73.66" smashed="yes">
-<attribute name="NAME" x="-29.972" y="75.692" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-29.972" y="70.485" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C37" library="Passive_Robotech" package="E2,5-7" value="220u" x="60.96" y="24.892" smashed="yes">
+<attribute name="NAME" x="64.008" y="26.924" size="1.27" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="64.008" y="21.717" size="1.27" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C38" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="-21.59" y="73.66" smashed="yes">
-<attribute name="NAME" x="-18.542" y="75.692" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-18.542" y="70.485" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C38" library="Passive_Robotech" package="E2,5-7" value="10uBP" x="53.848" y="25.146" smashed="yes" rot="R90">
+<attribute name="NAME" x="51.816" y="28.194" size="1.27" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="57.023" y="28.194" size="1.27" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C39" library="Passive_Robotech" package="2012-C" value="0.0022u" x="-90.17" y="80.01" smashed="yes">
-<attribute name="NAME" x="-91.551" y="81.0628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-91.551" y="78.11" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C39" library="Passive_Robotech" package="2012-C" value="0.0022u" x="54.102" y="34.29" smashed="yes" rot="R90">
+<attribute name="NAME" x="53.0492" y="32.909" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="56.002" y="32.909" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="C4" library="Passive_Robotech" package="2012-C" value="10u" x="-49.53" y="87.63" smashed="yes">
-<attribute name="NAME" x="-50.911" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-50.911" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C4" library="Passive_Robotech" package="2012-C" value="10u" x="24.13" y="63.246" smashed="yes">
+<attribute name="NAME" x="22.749" y="64.2988" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="22.749" y="61.346" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C40" library="Passive_Robotech" package="2012-C" value="10p" x="-38.1" y="92.71" smashed="yes">
-<attribute name="NAME" x="-39.481" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-39.481" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C40" library="Passive_Robotech" package="2012-C" value="10p" x="46.228" y="29.718" smashed="yes">
+<attribute name="NAME" x="44.847" y="30.7708" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="44.847" y="27.818" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C41" library="Passive_Robotech" package="E2,5-7" value="220u" x="-44.45" y="73.66" smashed="yes">
-<attribute name="NAME" x="-41.402" y="75.692" size="1.27" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-41.402" y="70.485" size="1.27" layer="27" font="vector" ratio="10"/>
+<element name="C41" library="Passive_Robotech" package="E2,5-7" value="220u" x="53.594" y="4.064" smashed="yes">
+<attribute name="NAME" x="56.642" y="6.096" size="1.27" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="56.642" y="0.889" size="1.27" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C5" library="Passive_Robotech" package="2012-C" value="10u" x="-53.34" y="87.63" smashed="yes">
-<attribute name="NAME" x="-54.721" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-54.721" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C5" library="Passive_Robotech" package="2012-C" value="10u" x="20.32" y="63.246" smashed="yes">
+<attribute name="NAME" x="18.939" y="64.2988" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="18.939" y="61.346" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C6" library="Passive_Robotech" package="2012-C" value="10u" x="-57.15" y="87.63" smashed="yes">
-<attribute name="NAME" x="-58.531" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-58.531" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C6" library="Passive_Robotech" package="2012-C" value="10u" x="16.51" y="63.246" smashed="yes">
+<attribute name="NAME" x="15.129" y="64.2988" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="15.129" y="61.346" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C7" library="Passive_Robotech" package="2012-C" value="10u" x="-60.96" y="87.63" smashed="yes">
-<attribute name="NAME" x="-62.341" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-62.341" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C7" library="Passive_Robotech" package="2012-C" value="10u" x="12.7" y="63.246" smashed="yes">
+<attribute name="NAME" x="11.319" y="64.2988" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="11.319" y="61.346" size="0.8128" layer="27" font="vector" ratio="10"/>
 </element>
-<element name="C8" library="Passive_Robotech" package="2012-C" value="0.1u" x="-64.77" y="87.63" smashed="yes">
-<attribute name="NAME" x="-66.151" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-66.151" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C8" library="Passive_Robotech" package="2012-C" value="0.1u" x="7.366" y="32.766" smashed="yes" rot="R180">
+<attribute name="NAME" x="8.747" y="31.7132" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="8.747" y="34.666" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
 </element>
-<element name="C9" library="Passive_Robotech" package="2012-C" value="10u" x="-68.58" y="87.63" smashed="yes">
-<attribute name="NAME" x="-69.961" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-69.961" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
+<element name="C9" library="Passive_Robotech" package="2012-C" value="10u" x="5.334" y="36.068" smashed="yes" rot="R270">
+<attribute name="NAME" x="6.3868" y="37.449" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="3.434" y="37.449" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
-<element name="CN1" library="Connector_Robotech" package="MJ8435" value="STEREO-3.5-MJ8435" x="-87.63" y="8.89" smashed="yes">
-<attribute name="NAME" x="-90.17" y="11.43" size="1.27" layer="25"/>
-</element>
-<element name="CON1" library="Connector_Robotech" package="UX60A-MB-5ST" value="MINI-USB-" x="-34.29" y="53.34" smashed="yes">
-<attribute name="NAME" x="-29.21" y="48.895" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="-38.735" y="46.355" size="1.27" layer="27"/>
-</element>
-<element name="D5" library="Diode_Robotech" package="D2012" value="GREEN" x="-77.47" y="80.01" smashed="yes">
-<attribute name="NAME" x="-78.47" y="81.4565" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-78.47" y="78.11" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="IC1" library="IC_Robotech" package="SOT23-6" value="TLV61046A" x="-49.53" y="64.77" smashed="yes">
-<attribute name="NAME" x="-52.07" y="67.31" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-52.07" y="60.96" size="1.27" layer="27"/>
-</element>
-<element name="IC2" library="IC_Robotech" package="SSOP5-P-0.95" value="TAR5SB33" x="-55.88" y="80.01" smashed="yes">
-<attribute name="NAME" x="-57.912" y="78.105" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
-<attribute name="VALUE" x="-53.086" y="78.105" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
-</element>
-<element name="IC4" library="IC_Robotech" package="EMP8" value="NJM4580EMP8" x="-24.13" y="64.77" smashed="yes">
-<attribute name="NAME" x="-26.9875" y="67.6275" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-26.9875" y="60.6425" size="1.27" layer="27"/>
-</element>
-<element name="Q1" library="Passive_Robotech" package="FA-238V" value="12M" x="-67.31" y="97.79" smashed="yes">
-<attribute name="NAME" x="-63.5" y="96.52" size="0.8128" layer="21" font="vector" rot="R90"/>
-<attribute name="VALUE" x="-69.85" y="96.52" size="0.8128" layer="21" font="vector" rot="R90"/>
-</element>
-<element name="R1" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="2M" x="-41.91" y="92.71" smashed="yes">
-<attribute name="NAME" x="-42.91" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-42.91" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R10" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="330" x="-76.2" y="92.71" smashed="yes">
-<attribute name="NAME" x="-77.2" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-77.2" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R11" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="330" x="-80.01" y="92.71" smashed="yes">
-<attribute name="NAME" x="-81.01" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-81.01" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R12" library="Passive_Robotech" package="2012-R" value="150" x="-83.82" y="92.71" smashed="yes">
-<attribute name="NAME" x="-84.82" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-84.82" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R13" library="Passive_Robotech" package="2012-R" value="150" x="-87.63" y="92.71" smashed="yes">
-<attribute name="NAME" x="-88.63" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-88.63" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R14" library="Passive_Robotech" package="2012-R" value="10k" x="-91.44" y="92.71" smashed="yes">
-<attribute name="NAME" x="-92.44" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-92.44" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R15" library="Passive_Robotech" package="2012-R" value="10k" x="-95.25" y="92.71" smashed="yes">
-<attribute name="NAME" x="-96.25" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-96.25" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R16" library="Passive_Robotech" package="2012-R" value="33k" x="-15.24" y="97.79" smashed="yes">
-<attribute name="NAME" x="-16.24" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-16.24" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R17" library="Passive_Robotech" package="2012-R" value="33k" x="-19.05" y="97.79" smashed="yes">
-<attribute name="NAME" x="-20.05" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-20.05" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R18" library="Passive_Robotech" package="2012-R" value="10k" x="-22.86" y="97.79" smashed="yes">
-<attribute name="NAME" x="-23.86" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-23.86" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R19" library="Passive_Robotech" package="2012-R" value="47k" x="-26.67" y="97.79" smashed="yes">
-<attribute name="NAME" x="-27.67" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-27.67" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R2" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="62K" x="-45.72" y="92.71" smashed="yes">
-<attribute name="NAME" x="-46.72" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-46.72" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R20" library="Passive_Robotech" package="2012-R" value="10k" x="-30.48" y="97.79" smashed="yes">
-<attribute name="NAME" x="-31.48" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-31.48" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R21" library="Passive_Robotech" package="2012-R" value="47k" x="-34.29" y="97.79" smashed="yes">
-<attribute name="NAME" x="-35.29" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-35.29" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R22" library="Passive_Robotech" package="2012-R" value="100k" x="-34.29" y="87.63" smashed="yes">
-<attribute name="NAME" x="-35.29" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-35.29" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R23" library="Passive_Robotech" package="2012-R" value="100k" x="-38.1" y="87.63" smashed="yes">
-<attribute name="NAME" x="-39.1" y="88.6828" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-39.1" y="85.73" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R24" library="Passive_Robotech" package="2012-R" value="10k" x="-38.1" y="97.79" smashed="yes">
-<attribute name="NAME" x="-39.1" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-39.1" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R25" library="Passive_Robotech" package="2012-R" value="4.7k" x="-41.91" y="97.79" smashed="yes">
-<attribute name="NAME" x="-42.91" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-42.91" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R26" library="Passive_Robotech" package="4532" value="10" x="-16.51" y="81.28" smashed="yes">
-<attribute name="NAME" x="-18.76" y="83.23" size="1.016" layer="25" font="vector"/>
-<attribute name="VALUE" x="-18.76" y="78.305" size="1.016" layer="27" font="vector"/>
-</element>
-<element name="R27" library="Passive_Robotech" package="2012-R" value="10k" x="-45.72" y="97.79" smashed="yes">
-<attribute name="NAME" x="-46.72" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-46.72" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R28" library="Passive_Robotech" package="2012-R" value="1k" x="-49.53" y="97.79" smashed="yes">
-<attribute name="NAME" x="-50.53" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-50.53" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R29" library="Passive_Robotech" package="2012-R" value="10k" x="-53.34" y="97.79" smashed="yes">
-<attribute name="NAME" x="-54.34" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-54.34" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R3" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="1M" x="-49.53" y="92.71" smashed="yes">
-<attribute name="NAME" x="-50.53" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-50.53" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R30" library="Passive_Robotech" package="2012-R" value="4.7k" x="-57.15" y="97.79" smashed="yes">
-<attribute name="NAME" x="-58.15" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-58.15" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R31" library="Passive_Robotech" package="4532" value="10" x="-22.86" y="81.28" smashed="yes">
-<attribute name="NAME" x="-25.11" y="83.23" size="1.016" layer="25" font="vector"/>
-<attribute name="VALUE" x="-25.11" y="78.305" size="1.016" layer="27" font="vector"/>
-</element>
-<element name="R32" library="Passive_Robotech" package="2012-R" value="10k" x="-60.96" y="97.79" smashed="yes">
-<attribute name="NAME" x="-61.96" y="98.8428" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-61.96" y="95.89" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R4" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="22" x="-53.34" y="92.71" smashed="yes">
-<attribute name="NAME" x="-54.34" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-54.34" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R5" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="22" x="-57.15" y="92.71" smashed="yes">
-<attribute name="NAME" x="-58.15" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-58.15" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R6" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="1.5k" x="-60.96" y="92.71" smashed="yes">
-<attribute name="NAME" x="-61.96" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-61.96" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R7" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="1.5k" x="-64.77" y="92.71" smashed="yes">
-<attribute name="NAME" x="-65.77" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-65.77" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R8" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="16" x="-68.58" y="92.71" smashed="yes">
-<attribute name="NAME" x="-69.58" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-69.58" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="R9" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="16" x="-72.39" y="92.71" smashed="yes">
-<attribute name="NAME" x="-73.39" y="93.7628" size="0.8128" layer="25" font="vector" ratio="10"/>
-<attribute name="VALUE" x="-73.39" y="90.81" size="0.8128" layer="27" font="vector" ratio="10"/>
-</element>
-<element name="SW1" library="Passive_Robotech" package="TOGGLESW_PANEL" value="TOGGLESW_SLIMPANEL" x="-16.51" y="53.34" smashed="yes"/>
-<element name="SW2" library="Passive_Robotech" package="TOGGLESW_PANEL" value="TOGGLESW_SLIMPANEL" x="-24.13" y="53.34" smashed="yes"/>
-<element name="U$1" library="Passive_Robotech" package="NR10050T" value="10u" x="-81.28" y="50.8" smashed="yes">
-<attribute name="NAME" x="-81.28" y="46.99" size="1.27" layer="25" rot="R90"/>
-<attribute name="VALUE" x="-78.74" y="46.99" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="U$2" library="Transistor_Robotech" package="SC59" value="2SK209" x="-83.82" y="73.66" smashed="yes">
-<attribute name="NAME" x="-85.725" y="75.565" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-85.725" y="70.485" size="1.27" layer="27"/>
-</element>
-<element name="U$3" library="Transistor_Robotech" package="SC59" value="2SK209" x="-91.44" y="73.66" smashed="yes">
-<attribute name="NAME" x="-93.345" y="75.565" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-93.345" y="70.485" size="1.27" layer="27"/>
-</element>
-<element name="U1" library="rezzonics" package="NUTUBE_6P1" value="" x="-41.91" y="15.24" smashed="yes">
-<attribute name="NAME" x="-63.41" y="27.24" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-63.41" y="25.24" size="1.27" layer="27"/>
-</element>
-<element name="VR1" library="Passive_Robotech" package="VR2" value="B500K" x="-44.45" y="52.07" smashed="yes">
-<attribute name="NAME" x="-48.26" y="55.88" size="1.27" layer="25" font="vector"/>
-<attribute name="VALUE" x="-48.26" y="46.99" size="1.27" layer="27" font="vector"/>
-</element>
-<element name="VR2" library="Passive_Robotech" package="VR2" value="B500K" x="-53.34" y="52.07" smashed="yes">
-<attribute name="NAME" x="-57.15" y="55.88" size="1.27" layer="25" font="vector"/>
-<attribute name="VALUE" x="-57.15" y="46.99" size="1.27" layer="27" font="vector"/>
-</element>
-<element name="VR3" library="Passive_Robotech" package="VR2" value="B10K" x="-62.23" y="52.07" smashed="yes">
-<attribute name="NAME" x="-66.04" y="55.88" size="1.27" layer="25" font="vector"/>
-<attribute name="VALUE" x="-66.04" y="46.99" size="1.27" layer="27" font="vector"/>
-</element>
-<element name="VR4" library="Passive_Robotech" package="VR2" value="B10K" x="-71.12" y="52.07" smashed="yes">
-<attribute name="NAME" x="-74.93" y="55.88" size="1.27" layer="25" font="vector"/>
-<attribute name="VALUE" x="-74.93" y="46.99" size="1.27" layer="27" font="vector"/>
-</element>
-<element name="VR5" library="Passive_Robotech" package="VR2C" value="" x="-81.28" y="24.13" smashed="yes">
-<attribute name="NAME" x="-82.55" y="25.4" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-82.55" y="19.05" size="1.27" layer="27"/>
-</element>
-<element name="IC3" library="IC_Robotech" package="SSOP28" value="PCM2704" x="-88.9" y="-5.08" smashed="yes">
-<attribute name="NAME" x="-94.376" y="-7.7099" size="1.27" layer="25" font="vector" rot="R90"/>
-<attribute name="VALUE" x="-92.7999" y="-5.76" size="1.27" layer="27" font="vector"/>
-</element>
+<element name="CN1" library="Connector_Robotech" package="MJ8435" value="STEREO-3.5-MJ8435" x="60.118" y="14.478" smashed="yes" rot="R270">
+<attribute name="NAME" x="62.658" y="17.018" size="1.27" layer="25" rot="R270"/>
+</element>
+<element name="CON1" library="Connector_Robotech" package="UX60A-MB-5ST" value="MINI-USB-" x="5.08" y="25.13" smashed="yes">
+<attribute name="NAME" x="10.16" y="20.685" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="0.635" y="18.145" size="1.27" layer="27"/>
+</element>
+<element name="D5" library="Diode_Robotech" package="D2012" value="GREEN" x="2.794" y="34.798" smashed="yes" rot="R270">
+<attribute name="NAME" x="4.2405" y="35.798" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="0.894" y="35.798" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="IC1" library="IC_Robotech" package="SOT23-6" value="TLV61046A" x="15.748" y="32.004" smashed="yes" rot="R90">
+<attribute name="NAME" x="13.208" y="29.464" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="10.16" y="33.274" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="IC2" library="IC_Robotech" package="SSOP5-P-0.95" value="TAR5SB33" x="9.652" y="36.322" smashed="yes">
+<attribute name="NAME" x="7.62" y="34.417" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="12.446" y="34.417" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
+</element>
+<element name="IC4" library="IC_Robotech" package="EMP8" value="NJM4580EMP8" x="49.53" y="35.306" smashed="yes" rot="R270">
+<attribute name="NAME" x="52.3875" y="38.1635" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="45.4025" y="38.1635" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="Q1" library="Passive_Robotech" package="FA-238V" value="12M" x="3.302" y="11.938" smashed="yes">
+<attribute name="NAME" x="7.112" y="10.668" size="0.8128" layer="21" font="vector" rot="R90"/>
+<attribute name="VALUE" x="0.762" y="10.668" size="0.8128" layer="21" font="vector" rot="R90"/>
+</element>
+<element name="R1" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="2M" x="14.986" y="35.306" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.986" y="34.2532" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="15.986" y="37.206" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R10" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="330" x="19.812" y="28.194" smashed="yes" rot="R180">
+<attribute name="NAME" x="20.812" y="27.1412" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="20.812" y="30.094" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R11" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="330" x="19.558" y="24.13" smashed="yes" rot="R180">
+<attribute name="NAME" x="20.558" y="23.0772" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="20.558" y="26.03" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R12" library="Passive_Robotech" package="2012-R" value="150" x="37.338" y="42.164" smashed="yes" rot="R270">
+<attribute name="NAME" x="38.3908" y="43.164" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="35.438" y="43.164" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="R13" library="Passive_Robotech" package="2012-R" value="150" x="37.846" y="6.35" smashed="yes" rot="R90">
+<attribute name="NAME" x="36.7932" y="5.35" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="39.746" y="5.35" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
+</element>
+<element name="R14" library="Passive_Robotech" package="2012-R" value="10k" x="19.812" y="33.274" smashed="yes" rot="R180">
+<attribute name="NAME" x="20.812" y="32.2212" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="20.812" y="35.174" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R15" library="Passive_Robotech" package="2012-R" value="10k" x="21.082" y="17.018" smashed="yes" rot="R180">
+<attribute name="NAME" x="22.082" y="15.9652" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="22.082" y="18.918" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R16" library="Passive_Robotech" package="2012-R" value="33k" x="34.798" y="36.576" smashed="yes" rot="R270">
+<attribute name="NAME" x="35.8508" y="37.576" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="32.898" y="37.576" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="R17" library="Passive_Robotech" package="2012-R" value="33k" x="34.798" y="13.462" smashed="yes" rot="R90">
+<attribute name="NAME" x="33.7452" y="12.462" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="36.698" y="12.462" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
+</element>
+<element name="R18" library="Passive_Robotech" package="2012-R" value="10k" x="41.402" y="28.448" smashed="yes" rot="R90">
+<attribute name="NAME" x="40.3492" y="27.448" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="43.302" y="27.448" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
+</element>
+<element name="R19" library="Passive_Robotech" package="2012-R" value="47k" x="35.306" y="32.766" smashed="yes">
+<attribute name="NAME" x="34.306" y="33.8188" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="34.306" y="30.866" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R2" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="62K" x="18.034" y="36.576" smashed="yes" rot="R270">
+<attribute name="NAME" x="19.0868" y="37.576" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="16.134" y="37.576" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="R20" library="Passive_Robotech" package="2012-R" value="10k" x="41.402" y="21.844" smashed="yes" rot="R270">
+<attribute name="NAME" x="42.4548" y="22.844" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="39.502" y="22.844" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="R21" library="Passive_Robotech" package="2012-R" value="47k" x="35.306" y="17.526" smashed="yes">
+<attribute name="NAME" x="34.306" y="18.5788" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="34.306" y="15.626" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R22" library="Passive_Robotech" package="2012-R" value="100k" x="44.45" y="12.954" smashed="yes">
+<attribute name="NAME" x="43.45" y="14.0068" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="43.45" y="11.054" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R23" library="Passive_Robotech" package="2012-R" value="100k" x="44.704" y="19.558" smashed="yes" rot="R180">
+<attribute name="NAME" x="45.704" y="18.5052" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="45.704" y="21.458" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R24" library="Passive_Robotech" package="2012-R" value="10k" x="51.308" y="40.894" smashed="yes">
+<attribute name="NAME" x="50.308" y="41.9468" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="50.308" y="38.994" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R25" library="Passive_Robotech" package="2012-R" value="4.7k" x="47.498" y="40.894" smashed="yes">
+<attribute name="NAME" x="46.498" y="41.9468" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="46.498" y="38.994" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R26" library="Passive_Robotech" package="4532" value="10" x="49.276" y="19.05" smashed="yes" rot="R270">
+<attribute name="NAME" x="51.226" y="21.3" size="1.016" layer="25" font="vector" rot="R270"/>
+<attribute name="VALUE" x="46.301" y="21.3" size="1.016" layer="27" font="vector" rot="R270"/>
+</element>
+<element name="R27" library="Passive_Robotech" package="2012-R" value="10k" x="57.912" y="20.066" smashed="yes">
+<attribute name="NAME" x="56.912" y="21.1188" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="56.912" y="18.166" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R28" library="Passive_Robotech" package="2012-R" value="1k" x="2.794" y="39.37" smashed="yes" rot="R90">
+<attribute name="NAME" x="1.7412" y="38.37" size="0.8128" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="4.694" y="38.37" size="0.8128" layer="27" font="vector" ratio="10" rot="R90"/>
+</element>
+<element name="R29" library="Passive_Robotech" package="2012-R" value="10k" x="50.8" y="29.718" smashed="yes">
+<attribute name="NAME" x="49.8" y="30.7708" size="0.8128" layer="25" font="vector" ratio="10"/>
+<attribute name="VALUE" x="49.8" y="27.818" size="0.8128" layer="27" font="vector" ratio="10"/>
+</element>
+<element name="R3" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="1M" x="6.858" y="11.938" smashed="yes" rot="R270">
+<attribute name="NAME" x="7.9108" y="12.938" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="4.958" y="12.938" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="R30" library="Passive_Robotech" package="2012-R" value="4.7k" x="54.102" y="30.734" smashed="yes" rot="R270">
+<attribute name="NAME" x="55.1548" y="31.734" size="0.8128" layer="25" font="vector" ratio="10" rot="R270"/>
+<attribute name="VALUE" x="52.202" y="31.734" size="0.8128" layer="27" font="vector" ratio="10" rot="R270"/>
+</element>
+<element name="R31" library="Passive_Robotech" package="4532" value="10" x="49.276" y="11.684" smashed="yes" rot="R270">
+<attribute name="NAME" x="51.226" y="13.934" size="1.016" layer="25" font="vector" rot="R270"/>
+<attribute name="VALUE" x="46.301" y="13.934" size="1.016" layer="27" font="vector" rot="R270"/>
+</element>
+<element name="R32" library="Passive_Robotech" package="2012-R" value="10k" x="57.912" y="8.89" smashed="yes" rot="R180">
+<attribute name="NAME" x="58.912" y="7.8372" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="58.912" y="10.79" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R4" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="22" x="12.192" y="25.4" smashed="yes" rot="R180">
+<attribute name="NAME" x="13.192" y="24.3472" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="13.192" y="27.3" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R5" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="22" x="12.192" y="22.86" smashed="yes" rot="R180">
+<attribute name="NAME" x="13.192" y="21.8072" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="13.192" y="24.76" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R6" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="1.5k" x="12.192" y="20.32" smashed="yes" rot="R180">
+<attribute name="NAME" x="13.192" y="19.2672" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="13.192" y="22.22" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R7" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="1.5k" x="9.144" y="4.572" smashed="yes" rot="R180">
+<attribute name="NAME" x="10.144" y="3.5192" size="0.8128" layer="25" font="vector" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="10.144" y="6.472" size="0.8128" layer="27" font="vector" ratio="10" rot="R180"/>
+</element>
+<element name="R8" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="16" x="16.256" y="29.21" smashed="yes" rot="MR0">
+<attribute name="NAME" x="17.256" y="30.2628" size="0.8128" layer="26" font="vector" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="17.256" y="27.31" size="0.8128" layer="28" font="vector" ratio="10" rot="MR0"/>
+</element>
+<element name="R9" library="Passive_Robotech" library_urn="urn:adsk.eagle:library:29513872" package="2012-R" package3d_urn="urn:adsk.eagle:package:29514074/2" value="16" x="16.002" y="21.082" smashed="yes" rot="MR0">
+<attribute name="NAME" x="17.002" y="22.1348" size="0.8128" layer="26" font="vector" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="17.002" y="19.182" size="0.8128" layer="28" font="vector" ratio="10" rot="MR0"/>
+</element>
+<element name="U$1" library="Passive_Robotech" package="NR10050T" value="10u" x="13.208" y="44.196" smashed="yes">
+<attribute name="NAME" x="13.208" y="40.386" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="15.748" y="40.386" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U$2" library="Transistor_Robotech" package="SC59" value="2SK209" x="37.084" y="28.448" smashed="yes" rot="R90">
+<attribute name="NAME" x="35.179" y="26.543" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="40.259" y="26.543" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U$3" library="Transistor_Robotech" package="SC59" value="2SK209" x="37.084" y="21.844" smashed="yes" rot="R90">
+<attribute name="NAME" x="35.179" y="19.939" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="40.259" y="19.939" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="U1" library="rezzonics" package="NUTUBE_6P1_1" value="" x="35.052" y="24.892" smashed="yes" rot="R270">
+<attribute name="NAME" x="47.052" y="46.392" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="45.052" y="46.392" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="VR1" library="Passive_Robotech" package="VR2" value="B500K" x="25.146" y="37.338" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.336" y="33.528" size="1.27" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="30.226" y="33.528" size="1.27" layer="27" font="vector" rot="R90"/>
+</element>
+<element name="VR2" library="Passive_Robotech" package="VR2" value="B500K" x="25.146" y="12.7" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.336" y="8.89" size="1.27" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="30.226" y="8.89" size="1.27" layer="27" font="vector" rot="R90"/>
+</element>
+<element name="VR3" library="Passive_Robotech" package="VR2" value="B10K" x="25.146" y="45.466" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.336" y="41.656" size="1.27" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="30.226" y="41.656" size="1.27" layer="27" font="vector" rot="R90"/>
+</element>
+<element name="VR4" library="Passive_Robotech" package="VR2" value="B10K" x="25.146" y="4.572" smashed="yes" rot="R90">
+<attribute name="NAME" x="21.336" y="0.762" size="1.27" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="30.226" y="0.762" size="1.27" layer="27" font="vector" rot="R90"/>
+</element>
+<element name="VR5" library="Passive_Robotech" package="VR2C" value="" x="58.086" y="32.004" smashed="yes" rot="R90">
+<attribute name="NAME" x="56.816" y="30.734" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="63.166" y="30.734" size="1.27" layer="27" rot="R90"/>
+</element>
+<element name="IC3" library="IC_Robotech" package="SSOP28" value="PCM2704" x="13.97" y="11.176" smashed="yes">
+<attribute name="NAME" x="8.494" y="8.5461" size="1.27" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="10.0701" y="10.496" size="1.27" layer="27" font="vector"/>
+</element>
+<element name="SW1" library="Passive_Robotech" package="SS12D01G4" value="SLIDESW_SS12D01G4" x="44.196" y="44.704" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.3235" y="42.4815" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="48.3235" y="48.1965" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="SW2" library="Passive_Robotech" package="SS12D01G4" value="SLIDESW_SS12D01G4" x="44.196" y="4.318" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.3235" y="2.0955" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="48.3235" y="7.8105" size="1.27" layer="27" rot="R180"/>
+</element>
+<element name="HOLE1" library="Document_Robotech" package="HOLE_3.2" value="HOLE_3.2" x="3" y="47" smashed="yes"/>
+<element name="HOLE2" library="Document_Robotech" package="HOLE_3.2" value="HOLE_3.2" x="3" y="3" smashed="yes"/>
+<element name="HOLE3" library="Document_Robotech" package="HOLE_3.2" value="HOLE_3.2" x="62" y="3" smashed="yes"/>
+<element name="HOLE4" library="Document_Robotech" package="HOLE_3.2" value="HOLE_3.2" x="62" y="47" smashed="yes"/>
 </elements>
 <signals>
 <signal name="+5V">
@@ -1386,39 +1420,39 @@ Makoto Shimazu&lt;br&gt;
 <contactref element="C18" pad="1"/>
 <contactref element="D5" pad="A"/>
 <contactref element="IC3" pad="10"/>
-<wire x1="-85.28" y1="50.8" x2="-87.275" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-76.343" y1="80.01" x2="-85.28" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="-65.6907" y1="87.63" x2="-76.343" y2="80.01" width="0" layer="19" extent="1-1"/>
-<wire x1="-56.83" y1="78.81" x2="-65.6907" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-54.93" y1="78.81" x2="-56.83" y2="78.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-50.48" y1="65.97" x2="-54.93" y2="78.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-48.58" y1="65.97" x2="-50.48" y2="65.97" width="0" layer="19" extent="1-1"/>
-<wire x1="-42.8307" y1="87.63" x2="-54.93" y2="78.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-32.04" y1="54.94" x2="-48.58" y2="65.97" width="0" layer="19" extent="1-1"/>
-<wire x1="-16.1607" y1="92.71" x2="-42.8307" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="8.702" y1="35.122" x2="9.208" y2="44.196" width="0" layer="19" extent="1-1"/>
+<wire x1="10.602" y1="35.122" x2="8.702" y2="35.122" width="0" layer="19" extent="1-1"/>
+<wire x1="8.2867" y1="32.766" x2="8.702" y2="35.122" width="0" layer="19" extent="1-1"/>
+<wire x1="14.548" y1="32.954" x2="10.602" y2="35.122" width="0" layer="19" extent="1-1"/>
+<wire x1="14.548" y1="31.054" x2="14.548" y2="32.954" width="0" layer="19" extent="1-1"/>
+<wire x1="13.3667" y1="28.702" x2="14.548" y2="31.054" width="0" layer="19" extent="1-1"/>
+<wire x1="2.794" y1="33.671" x2="8.2867" y2="32.766" width="0" layer="19" extent="1-1"/>
+<wire x1="7.33" y1="26.73" x2="8.2867" y2="32.766" width="0" layer="19" extent="1-1"/>
+<wire x1="15.595" y1="7.551" x2="7.33" y2="26.73" width="0" layer="19" extent="1-1"/>
+<wire x1="14.6367" y1="4.318" x2="15.595" y2="7.551" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="IC1" pad="P$1"/>
 <contactref element="U$1" pad="2"/>
-<wire x1="-50.48" y1="63.57" x2="-77.28" y2="50.8" width="0" layer="19" extent="1-1"/>
+<wire x1="16.948" y1="31.054" x2="17.208" y2="44.196" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+26V">
 <contactref element="C7" pad="1"/>
 <contactref element="C4" pad="1"/>
 <contactref element="C5" pad="1"/>
 <contactref element="C6" pad="1"/>
-<wire x1="-54.2607" y1="87.63" x2="-50.4507" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-58.0707" y1="87.63" x2="-54.2607" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-61.8807" y1="87.63" x2="-58.0707" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="19.3993" y1="63.246" x2="23.2093" y2="63.246" width="0" layer="19" extent="1-1"/>
+<wire x1="15.5893" y1="63.246" x2="19.3993" y2="63.246" width="0" layer="19" extent="1-1"/>
+<wire x1="11.7793" y1="63.246" x2="15.5893" y2="63.246" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
 <contactref element="IC1" pad="P$3"/>
 <contactref element="R1" pad="1"/>
 <contactref element="R2" pad="2"/>
 <contactref element="C3" pad="2"/>
-<wire x1="-42.9577" y1="92.71" x2="-24.4794" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-44.6724" y1="92.71" x2="-42.9577" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-48.58" y1="63.57" x2="-44.6724" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="16.0337" y1="35.306" x2="18.034" y2="35.5284" width="0" layer="19" extent="1-1"/>
+<wire x1="16.1606" y1="37.338" x2="16.0337" y2="35.306" width="0" layer="19" extent="1-1"/>
+<wire x1="16.948" y1="32.954" x2="16.0337" y2="35.306" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="R2" pad="1"/>
@@ -1470,68 +1504,67 @@ Makoto Shimazu&lt;br&gt;
 <contactref element="IC3" pad="6"/>
 <contactref element="IC3" pad="11"/>
 <contactref element="IC3" pad="12"/>
-<wire x1="-86.625" y1="-8.705" x2="-89.875" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-85.975" y1="-8.705" x2="-86.625" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-85.975" y1="-1.455" x2="-85.975" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-87.275" y1="-1.455" x2="-85.975" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-89.83" y1="3.39" x2="-87.275" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.91" y1="11.24" x2="-85.975" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-41.91" y1="11.24" x2="-43.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-32.04" y1="51.74" x2="-41.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.08" y1="62.865" x2="-32.04" y2="51.74" width="0" layer="19" extent="1-1"/>
-<wire x1="-49.53" y1="63.57" x2="-32.04" y2="51.74" width="0" layer="19" extent="1-1"/>
-<wire x1="-64.77" y1="52.07" x2="-49.53" y2="63.57" width="0" layer="19" extent="1-1"/>
-<wire x1="-68.58" y1="52.07" x2="-64.77" y2="52.07" width="0" layer="19" extent="1-1"/>
-<wire x1="-60.73" y1="81.28" x2="-49.53" y2="63.57" width="0" layer="19" extent="1-1"/>
-<wire x1="-60.0394" y1="87.63" x2="-60.73" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-56.2294" y1="87.63" x2="-60.0394" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-52.4194" y1="87.63" x2="-56.2294" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-48.6094" y1="87.63" x2="-52.4194" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-44.7994" y1="87.63" x2="-48.6094" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-40.9894" y1="87.63" x2="-44.7994" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-46.7677" y1="92.71" x2="-48.6094" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-46.7677" y1="97.79" x2="-46.7677" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-48.4824" y1="97.79" x2="-46.7677" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-35.3377" y1="87.63" x2="-40.9894" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-29.5594" y1="92.71" x2="-35.3377" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-25.7494" y1="92.71" x2="-29.5594" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.9394" y1="92.71" x2="-25.7494" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-18.1294" y1="92.71" x2="-21.9394" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-14.3194" y1="92.71" x2="-18.1294" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-23.9077" y1="97.79" x2="-25.7494" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-31.5277" y1="97.79" x2="-29.5594" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-68.81" y1="81.28" x2="-60.73" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-73.89" y1="81.28" x2="-68.81" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-75.2794" y1="87.63" x2="-73.89" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-79.0894" y1="87.63" x2="-75.2794" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-75.1524" y1="92.71" x2="-75.2794" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-71.3424" y1="92.71" x2="-75.1524" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-67.5324" y1="92.71" x2="-71.3424" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-78.9624" y1="92.71" x2="-75.1524" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-66.11" y1="96.84" x2="-67.5324" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-68.51" y1="98.74" x2="-66.11" y2="96.84" width="0" layer="19" extent="1-1"/>
-<wire x1="-62.0077" y1="97.79" x2="-66.11" y2="96.84" width="0" layer="19" extent="1-1"/>
-<wire x1="-84.7407" y1="87.63" x2="-79.0894" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.7094" y1="87.63" x2="-84.7407" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-90.5194" y1="87.63" x2="-86.7094" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-94.3294" y1="87.63" x2="-90.5194" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-73.66" y1="73.66" x2="-73.89" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-89.2494" y1="80.01" x2="-90.5194" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-82.8994" y1="80.01" x2="-89.2494" y2="80.01" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="POWER-GND">
 <contactref element="IC2" pad="2"/>
 <contactref element="C10" pad="2"/>
 <contactref element="C9" pad="2"/>
 <contactref element="C8" pad="2"/>
-<wire x1="-63.8494" y1="87.63" x2="-55.88" y2="78.81" width="0" layer="19" extent="1-1"/>
-<wire x1="-67.6594" y1="87.63" x2="-63.8494" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-71.4694" y1="87.63" x2="-67.6594" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="47.625" y1="38.256" x2="54.102" y2="35.2106" width="0" layer="19" extent="1-1"/>
+<wire x1="43.942" y1="41.0526" x2="47.625" y2="38.256" width="0" layer="19" extent="1-1"/>
+<wire x1="35.052" y1="43.918" x2="43.942" y2="41.0526" width="0" layer="19" extent="1-1"/>
+<wire x1="35.4014" y1="46.99" x2="35.052" y2="43.918" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="42.926" x2="35.052" y2="43.918" width="0" layer="19" extent="1-1"/>
+<wire x1="18.034" y1="37.6237" x2="25.146" y2="42.926" width="0" layer="19" extent="1-1"/>
+<wire x1="16.948" y1="32.004" x2="18.034" y2="37.6237" width="0" layer="19" extent="1-1"/>
+<wire x1="18.8914" y1="30.734" x2="16.948" y2="32.004" width="0" layer="19" extent="1-1"/>
+<wire x1="18.7644" y1="28.194" x2="18.8914" y2="30.734" width="0" layer="19" extent="1-1"/>
+<wire x1="15.2084" y1="29.21" x2="16.948" y2="32.004" width="0" layer="19" extent="1-16"/>
+<wire x1="11.5254" y1="28.702" x2="15.2084" y2="29.21" width="0" layer="19" extent="1-16"/>
+<wire x1="11.938" y1="31.5914" x2="11.5254" y2="28.702" width="0" layer="19" extent="1-1"/>
+<wire x1="18.5104" y1="24.13" x2="18.7644" y2="28.194" width="0" layer="19" extent="1-1"/>
+<wire x1="9.652" y1="35.122" x2="11.938" y2="31.5914" width="0" layer="19" extent="1-1"/>
+<wire x1="6.4454" y1="32.766" x2="9.652" y2="35.122" width="0" layer="19" extent="1-1"/>
+<wire x1="5.334" y1="35.1474" x2="6.4454" y2="32.766" width="0" layer="19" extent="1-1"/>
+<wire x1="14.9544" y1="21.082" x2="18.5104" y2="24.13" width="0" layer="19" extent="1-16"/>
+<wire x1="16.6054" y1="17.018" x2="14.9544" y2="21.082" width="0" layer="19" extent="1-16"/>
+<wire x1="16.895" y1="14.801" x2="16.6054" y2="17.018" width="0" layer="19" extent="1-1"/>
+<wire x1="15.595" y1="14.801" x2="16.895" y2="14.801" width="0" layer="19" extent="1-1"/>
+<wire x1="11.962" y1="17.78" x2="14.9544" y2="21.082" width="0" layer="19" extent="1-16"/>
+<wire x1="7.7154" y1="17.526" x2="11.962" y2="17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="5.4294" y1="39.878" x2="5.334" y2="35.1474" width="0" layer="19" extent="1-1"/>
+<wire x1="2.794" y1="40.4176" x2="5.4294" y2="39.878" width="0" layer="19" extent="1-1"/>
+<wire x1="2.3814" y1="15.494" x2="7.7154" y2="17.526" width="0" layer="19" extent="1-1"/>
+<wire x1="2.102" y1="12.888" x2="2.3814" y2="15.494" width="0" layer="19" extent="1-1"/>
+<wire x1="4.502" y1="10.988" x2="2.102" y2="12.888" width="0" layer="19" extent="1-1"/>
+<wire x1="3.9686" y1="8.382" x2="4.502" y2="10.988" width="0" layer="19" extent="1-1"/>
+<wire x1="7.33" y1="23.53" x2="7.7154" y2="17.526" width="0" layer="19" extent="1-1"/>
+<wire x1="16.895" y1="7.551" x2="16.895" y2="14.801" width="0" layer="19" extent="1-1"/>
+<wire x1="16.245" y1="7.551" x2="16.895" y2="7.551" width="0" layer="19" extent="1-1"/>
+<wire x1="12.995" y1="7.551" x2="16.245" y2="7.551" width="0" layer="19" extent="1-1"/>
+<wire x1="12.7954" y1="4.318" x2="12.995" y2="7.551" width="0" layer="19" extent="1-1"/>
+<wire x1="20.574" y1="7.9694" x2="16.895" y2="7.551" width="0" layer="19" extent="1-1"/>
+<wire x1="19.2087" y1="4.318" x2="20.574" y2="7.9694" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="7.112" x2="20.574" y2="7.9694" width="0" layer="19" extent="1-1"/>
+<wire x1="35.052" y1="4.85" x2="25.146" y2="7.112" width="0" layer="19" extent="1-1"/>
+<wire x1="35.6554" y1="2.286" x2="35.052" y2="4.85" width="0" layer="19" extent="1-1"/>
+<wire x1="43.4023" y1="12.954" x2="35.052" y2="4.85" width="0" layer="19" extent="1-1"/>
+<wire x1="46.228" y1="26.416" x2="54.102" y2="35.2106" width="0" layer="19" extent="1-1"/>
+<wire x1="41.402" y1="27.4003" x2="46.228" y2="26.416" width="0" layer="19" extent="1-1"/>
+<wire x1="41.402" y1="22.8917" x2="41.402" y2="27.4003" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="26.892" x2="41.402" y2="27.4003" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="24.892" x2="31.052" y2="26.892" width="0" layer="19" extent="1-1"/>
+<wire x1="54.618" y1="16.678" x2="43.4023" y2="12.954" width="0" layer="19" extent="1-1"/>
+<wire x1="58.9597" y1="8.89" x2="54.618" y2="16.678" width="0" layer="19" extent="1-1"/>
+<wire x1="56.8643" y1="20.066" x2="54.618" y2="16.678" width="0" layer="19" extent="1-1"/>
+<wire x1="25.0506" y1="63.246" x2="2.794" y2="40.4176" width="0" layer="19" extent="1-1"/>
+<wire x1="21.2406" y1="63.246" x2="25.0506" y2="63.246" width="0" layer="19" extent="1-1"/>
+<wire x1="17.4306" y1="63.246" x2="21.2406" y2="63.246" width="0" layer="19" extent="1-1"/>
+<wire x1="13.6206" y1="63.246" x2="17.4306" y2="63.246" width="0" layer="19" extent="1-1"/>
+<wire x1="-11.0174" y1="43.942" x2="13.6206" y2="63.246" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$21">
 <contactref element="C10" pad="1"/>
 <contactref element="IC2" pad="4"/>
-<wire x1="-73.3107" y1="87.63" x2="-54.93" y2="81.21" width="0" layer="19" extent="1-1"/>
+<wire x1="7.2707" y1="39.878" x2="10.602" y2="37.522" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="C9" pad="1"/>
@@ -1542,53 +1575,53 @@ Makoto Shimazu&lt;br&gt;
 <contactref element="C26" pad="1"/>
 <contactref element="VR3" pad="2"/>
 <contactref element="VR4" pad="1"/>
-<wire x1="-23.7807" y1="92.71" x2="-19.9707" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-56.83" y1="81.21" x2="-23.7807" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-69.5007" y1="87.63" x2="-56.83" y2="81.21" width="0" layer="19" extent="1-1"/>
-<wire x1="-84.8677" y1="92.71" x2="-69.5007" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-88.6777" y1="92.71" x2="-84.8677" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-59.69" y1="52.07" x2="-56.83" y2="81.21" width="0" layer="19" extent="1-1"/>
-<wire x1="-73.66" y1="52.07" x2="-59.69" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="37.338" y1="43.2117" x2="37.2427" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="48.006" x2="37.2427" y2="46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="8.702" y1="37.522" x2="25.146" y2="48.006" width="0" layer="19" extent="1-1"/>
+<wire x1="5.334" y1="36.9887" x2="8.702" y2="37.522" width="0" layer="19" extent="1-1"/>
+<wire x1="37.846" y1="5.3023" x2="37.338" y2="43.2117" width="0" layer="19" extent="1-1"/>
+<wire x1="37.4967" y1="2.286" x2="37.846" y2="5.3023" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="2.032" x2="37.4967" y2="2.286" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="C11" pad="1"/>
 <contactref element="Q1" pad="1"/>
 <contactref element="R3" pad="2"/>
 <contactref element="IC3" pad="1"/>
-<wire x1="-77.1207" y1="87.63" x2="-93.125" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-68.51" y1="96.84" x2="-77.1207" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-48.4824" y1="92.71" x2="-68.51" y2="96.84" width="0" layer="19" extent="1-1"/>
+<wire x1="9.745" y1="7.551" x2="6.858" y2="10.8904" width="0" layer="19" extent="1-1"/>
+<wire x1="2.102" y1="10.988" x2="6.858" y2="10.8904" width="0" layer="19" extent="1-1"/>
+<wire x1="2.1273" y1="8.382" x2="2.102" y2="10.988" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="Q1" pad="3"/>
 <contactref element="C12" pad="1"/>
 <contactref element="R3" pad="1"/>
 <contactref element="IC3" pad="28"/>
-<wire x1="-80.9307" y1="87.63" x2="-93.125" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-66.11" y1="98.74" x2="-80.9307" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-50.5777" y1="92.71" x2="-66.11" y2="98.74" width="0" layer="19" extent="1-1"/>
+<wire x1="6.858" y1="12.9857" x2="9.745" y2="14.801" width="0" layer="19" extent="1-1"/>
+<wire x1="4.502" y1="12.888" x2="6.858" y2="12.9857" width="0" layer="19" extent="1-1"/>
+<wire x1="4.2227" y1="15.494" x2="4.502" y2="12.888" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
 <contactref element="R5" pad="1"/>
 <contactref element="IC3" pad="9"/>
-<wire x1="-58.1977" y1="92.71" x2="-87.925" y2="-8.705" width="0" layer="19" extent="1-1"/>
+<wire x1="14.945" y1="7.551" x2="13.2397" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="R4" pad="1"/>
 <contactref element="IC3" pad="8"/>
-<wire x1="-54.3877" y1="92.71" x2="-88.575" y2="-8.705" width="0" layer="19" extent="1-1"/>
+<wire x1="14.295" y1="7.551" x2="13.2397" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="R4" pad="2"/>
 <contactref element="CON1" pad="2"/>
-<wire x1="-32.04" y1="54.14" x2="-52.2924" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="7.33" y1="25.93" x2="11.1444" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="R5" pad="2"/>
 <contactref element="CON1" pad="3"/>
 <contactref element="R6" pad="2"/>
-<wire x1="-59.9124" y1="92.71" x2="-56.1024" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-32.04" y1="53.34" x2="-56.1024" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="11.1444" y1="20.32" x2="11.1444" y2="22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="7.33" y1="25.13" x2="11.1444" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
 <contactref element="R6" pad="1"/>
@@ -1599,99 +1632,99 @@ Makoto Shimazu&lt;br&gt;
 <contactref element="IC3" pad="21"/>
 <contactref element="IC3" pad="25"/>
 <contactref element="IC3" pad="26"/>
-<wire x1="-89.225" y1="-8.705" x2="-91.175" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-91.175" y1="-1.455" x2="-91.175" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-91.825" y1="-1.455" x2="-91.175" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-88.575" y1="-1.455" x2="-91.175" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-88.5507" y1="87.63" x2="-88.575" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-63.7224" y1="92.71" x2="-88.5507" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-62.0077" y1="92.71" x2="-63.7224" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="14.295" y1="14.801" x2="13.2397" y2="20.32" width="0" layer="19" extent="1-1"/>
+<wire x1="11.695" y1="14.801" x2="14.295" y2="14.801" width="0" layer="19" extent="1-1"/>
+<wire x1="11.045" y1="14.801" x2="11.695" y2="14.801" width="0" layer="19" extent="1-1"/>
+<wire x1="11.695" y1="7.551" x2="11.695" y2="14.801" width="0" layer="19" extent="1-1"/>
+<wire x1="13.645" y1="7.551" x2="11.695" y2="7.551" width="0" layer="19" extent="1-1"/>
+<wire x1="8.0964" y1="4.572" x2="11.695" y2="7.551" width="0" layer="19" extent="1-1"/>
+<wire x1="-12.8587" y1="43.942" x2="13.2397" y2="20.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="R7" pad="1"/>
 <contactref element="IC3" pad="3"/>
-<wire x1="-65.8177" y1="92.71" x2="-91.825" y2="-8.705" width="0" layer="19" extent="1-1"/>
+<wire x1="10.1917" y1="4.572" x2="11.045" y2="7.551" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$14">
 <contactref element="C19" pad="2"/>
 <contactref element="R8" pad="1"/>
-<wire x1="-94.3294" y1="80.01" x2="-69.6277" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="17.3037" y1="29.21" x2="19.1454" y2="29.21" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$16">
 <contactref element="C20" pad="2"/>
 <contactref element="R9" pad="1"/>
-<wire x1="-73.4377" y1="92.71" x2="-14.3194" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="17.0497" y1="21.082" x2="18.8914" y2="21.082" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$17">
 <contactref element="C20" pad="1"/>
 <contactref element="R11" pad="1"/>
 <contactref element="C22" pad="+"/>
 <contactref element="IC3" pad="15"/>
-<wire x1="-76.2" y1="64.77" x2="-84.675" y2="-1.455" width="0" layer="19" extent="1-1"/>
-<wire x1="-81.0577" y1="92.71" x2="-76.2" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="-16.1607" y1="87.63" x2="-76.2" y2="64.77" width="0" layer="19" extent="1-1"/>
+<wire x1="20.7327" y1="21.082" x2="20.6057" y2="24.13" width="0" layer="19" extent="1-16"/>
+<wire x1="23.876" y1="21.082" x2="20.7327" y2="21.082" width="0" layer="19" extent="16-16"/>
+<wire x1="18.195" y1="14.801" x2="20.7327" y2="21.082" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$18">
 <contactref element="R10" pad="1"/>
 <contactref element="C19" pad="1"/>
 <contactref element="C21" pad="+"/>
 <contactref element="IC3" pad="14"/>
-<wire x1="-63.5" y1="64.77" x2="-84.675" y2="-8.705" width="0" layer="19" extent="1-1"/>
-<wire x1="-77.2477" y1="92.71" x2="-63.5" y2="64.77" width="0" layer="19" extent="1-1"/>
-<wire x1="-96.1707" y1="80.01" x2="-77.2477" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="20.9867" y1="29.21" x2="23.876" y2="29.21" width="0" layer="19" extent="16-16"/>
+<wire x1="20.8597" y1="28.194" x2="20.9867" y2="29.21" width="0" layer="19" extent="1-16"/>
+<wire x1="18.195" y1="7.551" x2="20.8597" y2="28.194" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DAC_L">
 <contactref element="C21" pad="-"/>
 <contactref element="U1" pad="4"/>
 <contactref element="R16" pad="2"/>
 <contactref element="R19" pad="1"/>
-<wire x1="-27.7177" y1="97.79" x2="-14.1924" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-60.96" y1="64.77" x2="-27.7177" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-51.91" y1="11.24" x2="-60.96" y2="64.77" width="0" layer="19" extent="1-1"/>
+<wire x1="34.2583" y1="32.766" x2="34.798" y2="35.5284" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="34.892" x2="34.798" y2="35.5284" width="0" layer="19" extent="1-1"/>
+<wire x1="26.416" y1="29.21" x2="31.052" y2="34.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DAC_R">
 <contactref element="C22" pad="-"/>
 <contactref element="U1" pad="14"/>
 <contactref element="R17" pad="2"/>
 <contactref element="R21" pad="1"/>
-<wire x1="-35.3377" y1="97.79" x2="-18.0024" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-73.66" y1="64.77" x2="-35.3377" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-31.91" y1="11.24" x2="-73.66" y2="64.77" width="0" layer="19" extent="1-1"/>
+<wire x1="34.798" y1="14.5096" x2="34.2583" y2="17.526" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="14.892" x2="34.798" y2="14.5096" width="0" layer="19" extent="1-1"/>
+<wire x1="26.416" y1="21.082" x2="31.052" y2="14.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$19">
 <contactref element="D5" pad="K"/>
 <contactref element="R28" pad="1"/>
-<wire x1="-78.597" y1="80.01" x2="-50.5777" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="2.794" y1="35.925" x2="2.794" y2="38.3223" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$22">
 <contactref element="C24" pad="2"/>
 <contactref element="U1" pad="16"/>
 <contactref element="U1" pad="17"/>
 <contactref element="R13" pad="2"/>
-<wire x1="-25.91" y1="11.24" x2="-27.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-70.89" y1="81.28" x2="-27.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-86.5824" y1="92.71" x2="-70.89" y2="81.28" width="0" layer="19" extent="1-1"/>
+<wire x1="37.846" y1="7.3976" x2="35.052" y2="7.85" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="8.892" x2="35.052" y2="7.85" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="10.892" x2="31.052" y2="8.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$23">
 <contactref element="C23" pad="2"/>
 <contactref element="U1" pad="1"/>
 <contactref element="U1" pad="2"/>
 <contactref element="R12" pad="2"/>
-<wire x1="-55.91" y1="11.24" x2="-57.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-65.81" y1="81.28" x2="-57.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-82.7724" y1="92.71" x2="-65.81" y2="81.28" width="0" layer="19" extent="1-1"/>
+<wire x1="35.052" y1="40.918" x2="37.338" y2="41.1164" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="40.892" x2="35.052" y2="40.918" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="38.892" x2="31.052" y2="40.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TUBE_R">
 <contactref element="U1" pad="10"/>
 <contactref element="VR2" pad="1"/>
 <contactref element="U$3" pad="C"/>
-<wire x1="-55.88" y1="52.07" x2="-39.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-91.44" y1="74.86" x2="-55.88" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="22.892" x2="35.884" y2="21.844" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="10.16" x2="31.052" y2="22.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$26">
 <contactref element="VR2" pad="2"/>
 <contactref element="R15" pad="1"/>
-<wire x1="-50.8" y1="52.07" x2="-96.2977" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="22.1297" y1="17.018" x2="25.146" y2="15.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AVCC">
 <contactref element="R14" pad="2"/>
@@ -1706,71 +1739,71 @@ Makoto Shimazu&lt;br&gt;
 <contactref element="U$3" pad="E"/>
 <contactref element="IC4" pad="P$8"/>
 <contactref element="R23" pad="2"/>
-<wire x1="-31.4007" y1="92.71" x2="-27.5907" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-26.3207" y1="87.63" x2="-27.5907" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-37.0524" y1="87.63" x2="-31.4007" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-40.8624" y1="92.71" x2="-37.0524" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-46.6407" y1="87.63" x2="-40.8624" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.18" y1="66.675" x2="-26.3207" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-49.53" y1="65.97" x2="-46.6407" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-82.87" y1="72.46" x2="-49.53" y2="65.97" width="0" layer="19" extent="1-1"/>
-<wire x1="-90.49" y1="72.46" x2="-82.87" y2="72.46" width="0" layer="19" extent="1-1"/>
-<wire x1="-90.3924" y1="92.71" x2="-90.49" y2="72.46" width="0" layer="19" extent="1-1"/>
-<wire x1="-94.2024" y1="92.71" x2="-90.3924" y2="92.71" width="0" layer="19" extent="1-1"/>
+<wire x1="38.284" y1="29.398" x2="51.435" y2="32.356" width="0" layer="19" extent="1-1"/>
+<wire x1="38.284" y1="22.794" x2="38.284" y2="29.398" width="0" layer="19" extent="1-1"/>
+<wire x1="43.6564" y1="19.558" x2="38.284" y2="22.794" width="0" layer="19" extent="1-1"/>
+<wire x1="20.7327" y1="30.734" x2="38.284" y2="29.398" width="0" layer="19" extent="1-1"/>
+<wire x1="18.7644" y1="33.274" x2="20.7327" y2="30.734" width="0" layer="19" extent="1-1"/>
+<wire x1="14.548" y1="32.004" x2="18.7644" y2="33.274" width="0" layer="19" extent="1-1"/>
+<wire x1="11.938" y1="33.4327" x2="14.548" y2="32.004" width="0" layer="19" extent="1-1"/>
+<wire x1="13.9384" y1="35.306" x2="11.938" y2="33.4327" width="0" layer="19" extent="1-1"/>
+<wire x1="14.3193" y1="37.338" x2="13.9384" y2="35.306" width="0" layer="19" extent="1-1"/>
+<wire x1="20.0344" y1="17.018" x2="20.7327" y2="30.734" width="0" layer="19" extent="1-1"/>
+<wire x1="20.574" y1="9.8107" x2="20.0344" y2="17.018" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$27">
 <contactref element="VR3" pad="BR"/>
 <contactref element="R16" pad="1"/>
-<wire x1="-62.23" y1="54.61" x2="-16.2877" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="22.606" y1="45.466" x2="34.798" y2="37.6237" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$28">
 <contactref element="R17" pad="1"/>
 <contactref element="VR4" pad="BR"/>
-<wire x1="-71.12" y1="54.61" x2="-20.0977" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="22.606" y1="4.572" x2="34.798" y2="12.4143" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$20">
 <contactref element="R14" pad="1"/>
 <contactref element="VR1" pad="1"/>
-<wire x1="-92.4877" y1="92.71" x2="-46.99" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="20.8597" y1="33.274" x2="25.146" y2="34.798" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="TUBE_L">
 <contactref element="VR1" pad="2"/>
 <contactref element="U1" pad="7"/>
 <contactref element="U$2" pad="C"/>
-<wire x1="-41.91" y1="52.07" x2="-45.91" y2="11.24" width="0" layer="19" extent="1-1"/>
-<wire x1="-83.82" y1="74.86" x2="-41.91" y2="52.07" width="0" layer="19" extent="1-1"/>
+<wire x1="31.052" y1="28.892" x2="35.884" y2="28.448" width="0" layer="19" extent="1-1"/>
+<wire x1="25.146" y1="39.878" x2="31.052" y2="28.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FET_L">
 <contactref element="R18" pad="2"/>
 <contactref element="U$2" pad="B"/>
-<contactref element="SW1" pad="2"/>
 <contactref element="C34" pad="+"/>
-<wire x1="-16.51" y1="53.34" x2="-21.8124" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-84.77" y1="72.46" x2="-21.8124" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-88.9" y1="64.77" x2="-84.77" y2="72.46" width="0" layer="19" extent="1-1"/>
+<contactref element="SW1" pad="P$2"/>
+<wire x1="44.196" y1="44.704" x2="53.594" y2="44.196" width="0" layer="19" extent="1-1"/>
+<wire x1="41.402" y1="29.4956" x2="44.196" y2="44.704" width="0" layer="19" extent="1-1"/>
+<wire x1="38.284" y1="27.498" x2="41.402" y2="29.4956" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$31">
 <contactref element="R19" pad="2"/>
 <contactref element="C30" pad="2"/>
 <contactref element="C29" pad="-"/>
-<wire x1="-33.02" y1="81.28" x2="-25.6224" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-53.34" y1="73.66" x2="-33.02" y2="81.28" width="0" layer="19" extent="1-1"/>
+<wire x1="39.116" y1="33.528" x2="40.132" y2="37.592" width="0" layer="19" extent="1-1"/>
+<wire x1="36.3536" y1="32.766" x2="39.116" y2="33.528" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="FET_R">
 <contactref element="R20" pad="2"/>
 <contactref element="U$3" pad="B"/>
-<contactref element="SW2" pad="2"/>
 <contactref element="C38" pad="+"/>
-<wire x1="-22.86" y1="73.66" x2="-29.4324" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-24.13" y1="53.34" x2="-22.86" y2="73.66" width="0" layer="19" extent="1-1"/>
-<wire x1="-92.39" y1="72.46" x2="-29.4324" y2="97.79" width="0" layer="19" extent="1-1"/>
+<contactref element="SW2" pad="P$2"/>
+<wire x1="41.402" y1="20.7964" x2="53.848" y2="23.876" width="0" layer="19" extent="1-1"/>
+<wire x1="38.284" y1="20.894" x2="41.402" y2="20.7964" width="0" layer="19" extent="1-1"/>
+<wire x1="44.196" y1="4.318" x2="41.402" y2="20.7964" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$37">
 <contactref element="R21" pad="2"/>
 <contactref element="C31" pad="-"/>
 <contactref element="C32" pad="2"/>
-<wire x1="-45.72" y1="81.28" x2="-33.2424" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-63.5" y1="73.66" x2="-45.72" y2="81.28" width="0" layer="19" extent="1-1"/>
+<wire x1="36.3536" y1="17.526" x2="39.116" y2="16.256" width="0" layer="19" extent="1-1"/>
+<wire x1="40.132" y1="11.684" x2="39.116" y2="16.256" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BIAS">
 <contactref element="R22" pad="2"/>
@@ -1778,150 +1811,150 @@ Makoto Shimazu&lt;br&gt;
 <contactref element="C33" pad="+"/>
 <contactref element="IC4" pad="P$3"/>
 <contactref element="IC4" pad="P$5"/>
-<wire x1="-39.1477" y1="87.63" x2="-33.2424" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.08" y1="64.135" x2="-33.2424" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.18" y1="62.865" x2="-27.08" y2="64.135" width="0" layer="19" extent="1-1"/>
-<wire x1="-76.2" y1="73.66" x2="-39.1477" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="47.625" y1="32.356" x2="48.895" y2="38.256" width="0" layer="19" extent="1-1"/>
+<wire x1="46.228" y1="23.876" x2="47.625" y2="32.356" width="0" layer="19" extent="1-1"/>
+<wire x1="45.7517" y1="19.558" x2="46.228" y2="23.876" width="0" layer="19" extent="1-1"/>
+<wire x1="45.4976" y1="12.954" x2="45.7517" y2="19.558" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$24">
-<contactref element="SW1" pad="1"/>
 <contactref element="C30" pad="1"/>
-<wire x1="-16.51" y1="58.04" x2="-38.1" y2="81.28" width="0" layer="19" extent="1-1"/>
+<contactref element="SW1" pad="P$1"/>
+<wire x1="44.196" y1="33.528" x2="46.696" y2="44.704" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$25">
 <contactref element="C29" pad="+"/>
-<contactref element="SW1" pad="3"/>
-<wire x1="-55.88" y1="73.66" x2="-16.51" y2="48.64" width="0" layer="19" extent="1-1"/>
+<contactref element="SW1" pad="P$3"/>
+<wire x1="40.132" y1="40.132" x2="41.696" y2="44.704" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$29">
-<contactref element="SW2" pad="1"/>
 <contactref element="C32" pad="1"/>
-<wire x1="-50.8" y1="81.28" x2="-24.13" y2="58.04" width="0" layer="19" extent="1-1"/>
+<contactref element="SW2" pad="P$1"/>
+<wire x1="46.696" y1="4.318" x2="44.196" y2="16.256" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$30">
-<contactref element="SW2" pad="3"/>
 <contactref element="C31" pad="+"/>
-<wire x1="-66.04" y1="73.66" x2="-24.13" y2="48.64" width="0" layer="19" extent="1-1"/>
+<contactref element="SW2" pad="P$3"/>
+<wire x1="41.696" y1="4.318" x2="40.132" y2="9.144" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$32">
 <contactref element="R24" pad="1"/>
 <contactref element="R25" pad="2"/>
 <contactref element="IC4" pad="P$2"/>
-<wire x1="-40.8624" y1="97.79" x2="-39.1477" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-27.08" y1="65.405" x2="-39.1477" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="48.5456" y1="40.894" x2="50.2603" y2="40.894" width="0" layer="19" extent="1-1"/>
+<wire x1="50.165" y1="38.256" x2="50.2603" y2="40.894" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$33">
 <contactref element="R25" pad="1"/>
 <contactref element="C35" pad="1"/>
-<wire x1="-84.7407" y1="80.01" x2="-42.9577" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="43.942" y1="39.2113" x2="46.4503" y2="40.894" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$34">
 <contactref element="R24" pad="2"/>
-<contactref element="100K" pad="1"/>
+<contactref element="R34" pad="1"/>
 <contactref element="VR5" pad="3"/>
 <contactref element="C36" pad="1"/>
 <contactref element="VR5" pad="2"/>
-<wire x1="-35.2107" y1="92.71" x2="-37.0524" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-31.5277" y1="87.63" x2="-35.2107" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-76.2" y1="21.59" x2="-31.5277" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-78.74" y1="21.59" x2="-76.2" y2="21.59" width="0" layer="19" extent="1-1"/>
+<wire x1="60.626" y1="37.084" x2="59.9757" y2="40.894" width="0" layer="19" extent="1-1"/>
+<wire x1="60.626" y1="34.544" x2="60.626" y2="37.084" width="0" layer="19" extent="1-1"/>
+<wire x1="54.1973" y1="40.894" x2="59.9757" y2="40.894" width="0" layer="19" extent="1-1"/>
+<wire x1="52.3556" y1="40.894" x2="54.1973" y2="40.894" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$35">
-<contactref element="100K" pad="2"/>
+<contactref element="R34" pad="2"/>
 <contactref element="C34" pad="-"/>
-<wire x1="-86.36" y1="64.77" x2="-29.4324" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="57.8804" y1="40.894" x2="53.594" y2="46.736" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$36">
 <contactref element="VR5" pad="1"/>
 <contactref element="IC4" pad="P$1"/>
 <contactref element="C36" pad="2"/>
 <contactref element="R26" pad="1"/>
-<wire x1="-27.08" y1="66.675" x2="-18.56" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-33.3694" y1="92.71" x2="-18.56" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-81.28" y1="21.59" x2="-27.08" y2="66.675" width="0" layer="19" extent="1-1"/>
+<wire x1="51.435" y1="38.256" x2="56.0386" y2="40.894" width="0" layer="19" extent="1-1"/>
+<wire x1="60.626" y1="32.004" x2="56.0386" y2="40.894" width="0" layer="19" extent="1-1"/>
+<wire x1="49.276" y1="21.1" x2="60.626" y2="32.004" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$38">
 <contactref element="R26" pad="2"/>
 <contactref element="C37" pad="+"/>
-<wire x1="-34.29" y1="73.66" x2="-14.46" y2="81.28" width="0" layer="19" extent="1-1"/>
+<wire x1="49.276" y1="17" x2="59.69" y2="24.892" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OUT_L">
 <contactref element="R27" pad="2"/>
 <contactref element="C37" pad="-"/>
 <contactref element="CN1" pad="2A"/>
 <contactref element="CN1" pad="2B"/>
-<wire x1="-84.88" y1="8.89" x2="-90.38" y2="8.89" width="0" layer="19" extent="1-1"/>
-<wire x1="-31.75" y1="73.66" x2="-84.88" y2="8.89" width="0" layer="19" extent="1-1"/>
-<wire x1="-44.6724" y1="97.79" x2="-31.75" y2="73.66" width="0" layer="19" extent="1-1"/>
+<wire x1="58.9596" y1="20.066" x2="62.23" y2="24.892" width="0" layer="19" extent="1-1"/>
+<wire x1="60.118" y1="17.228" x2="58.9596" y2="20.066" width="0" layer="19" extent="1-1"/>
+<wire x1="60.118" y1="11.728" x2="60.118" y2="17.228" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$40">
 <contactref element="R29" pad="1"/>
 <contactref element="R30" pad="2"/>
 <contactref element="IC4" pad="P$6"/>
-<wire x1="-56.1024" y1="97.79" x2="-54.3877" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.18" y1="64.135" x2="-54.3877" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="49.7523" y1="29.718" x2="54.102" y2="29.6864" width="0" layer="19" extent="1-1"/>
+<wire x1="48.895" y1="32.356" x2="49.7523" y2="29.718" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$41">
 <contactref element="R30" pad="1"/>
 <contactref element="C39" pad="1"/>
-<wire x1="-91.0907" y1="80.01" x2="-58.1977" y2="97.79" width="0" layer="19" extent="1-1"/>
+<wire x1="54.102" y1="31.7817" x2="54.102" y2="33.3693" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$42">
 <contactref element="R29" pad="2"/>
-<contactref element="100K1" pad="1"/>
+<contactref element="R33" pad="1"/>
 <contactref element="C40" pad="1"/>
 <contactref element="VR5" pad="3'"/>
 <contactref element="VR5" pad="2'"/>
-<wire x1="-39.0207" y1="92.71" x2="-21.3677" y2="87.63" width="0" layer="19" extent="1-1"/>
-<wire x1="-52.2924" y1="97.79" x2="-39.0207" y2="92.71" width="0" layer="19" extent="1-1"/>
-<wire x1="-76.2" y1="24.13" x2="-52.2924" y2="97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-78.74" y1="24.13" x2="-76.2" y2="24.13" width="0" layer="19" extent="1-1"/>
+<wire x1="58.086" y1="37.084" x2="54.102" y2="39.1477" width="0" layer="19" extent="1-1"/>
+<wire x1="58.086" y1="34.544" x2="58.086" y2="37.084" width="0" layer="19" extent="1-1"/>
+<wire x1="51.8476" y1="29.718" x2="58.086" y2="34.544" width="0" layer="19" extent="1-1"/>
+<wire x1="45.3073" y1="29.718" x2="54.102" y2="39.1477" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$43">
-<contactref element="100K1" pad="2"/>
+<contactref element="R33" pad="2"/>
 <contactref element="C38" pad="-"/>
-<wire x1="-20.32" y1="73.66" x2="-19.2724" y2="87.63" width="0" layer="19" extent="1-1"/>
+<wire x1="53.848" y1="26.416" x2="54.102" y2="37.0524" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$44">
 <contactref element="C40" pad="2"/>
 <contactref element="R31" pad="1"/>
 <contactref element="VR5" pad="1'"/>
 <contactref element="IC4" pad="P$7"/>
-<wire x1="-21.18" y1="65.405" x2="-24.91" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-37.1794" y1="92.71" x2="-24.91" y2="81.28" width="0" layer="19" extent="1-1"/>
-<wire x1="-81.28" y1="24.13" x2="-21.18" y2="65.405" width="0" layer="19" extent="1-1"/>
+<wire x1="50.165" y1="32.356" x2="58.086" y2="32.004" width="0" layer="19" extent="1-1"/>
+<wire x1="49.276" y1="13.734" x2="50.165" y2="32.356" width="0" layer="19" extent="1-1"/>
+<wire x1="47.1486" y1="29.718" x2="50.165" y2="32.356" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$45">
 <contactref element="R31" pad="2"/>
 <contactref element="C41" pad="+"/>
-<wire x1="-45.72" y1="73.66" x2="-20.81" y2="81.28" width="0" layer="19" extent="1-1"/>
+<wire x1="52.324" y1="4.064" x2="49.276" y2="9.634" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OUT_R">
 <contactref element="R32" pad="2"/>
 <contactref element="C41" pad="-"/>
 <contactref element="CN1" pad="3"/>
-<wire x1="-43.18" y1="73.66" x2="-85.43" y2="3.39" width="0" layer="19" extent="1-1"/>
-<wire x1="-59.9124" y1="97.79" x2="-43.18" y2="73.66" width="0" layer="19" extent="1-1"/>
+<wire x1="54.618" y1="12.278" x2="56.8644" y2="8.89" width="0" layer="19" extent="1-1"/>
+<wire x1="54.864" y1="4.064" x2="56.8644" y2="8.89" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="C13" pad="2"/>
 <contactref element="IC3" pad="13"/>
-<wire x1="-82.8994" y1="87.63" x2="-85.325" y2="-8.705" width="0" layer="19" extent="1-1"/>
+<wire x1="17.3674" y1="4.318" x2="17.545" y2="7.551" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
 <contactref element="C15" pad="1"/>
 <contactref element="IC3" pad="20"/>
-<wire x1="-92.3607" y1="87.63" x2="-87.925" y2="-1.455" width="0" layer="19" extent="1-1"/>
+<wire x1="9.5567" y1="17.526" x2="14.945" y2="14.801" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$12">
 <contactref element="C17" pad="1"/>
 <contactref element="IC3" pad="16"/>
-<wire x1="-96.1707" y1="87.63" x2="-85.325" y2="-1.455" width="0" layer="19" extent="1-1"/>
+<wire x1="17.545" y1="14.801" x2="18.4467" y2="17.018" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
 <contactref element="C16" pad="1"/>
 <contactref element="IC3" pad="18"/>
-<wire x1="-63.73" y1="81.28" x2="-86.625" y2="-1.455" width="0" layer="19" extent="1-1"/>
+<wire x1="16.245" y1="14.801" x2="14.962" y2="17.78" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -1932,18 +1965,32 @@ Makoto Shimazu&lt;br&gt;
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="5,1,6298d84a0a9d43fc"/>
-<approved hash="5,1,9a71b38ec26a6c99"/>
-<approved hash="5,1,714af28e607e66a2"/>
-<approved hash="5,1,99a7ed6e7e578fae"/>
-<approved hash="5,1,729cac6edc438595"/>
-<approved hash="5,1,da84504a5a9d23e0"/>
-<approved hash="5,16,6298d84a0a9d43fc"/>
-<approved hash="5,16,9a71b38ec26a6c99"/>
-<approved hash="5,16,714af28e607e66a2"/>
-<approved hash="5,16,99a7ed6e7e578fae"/>
-<approved hash="5,16,729cac6edc438595"/>
-<approved hash="5,16,da84504a5a9d23e0"/>
+<approved hash="5,1,6501cb72d45bc7d8"/>
+<approved hash="5,1,9289cb62d45b3040"/>
+<approved hash="5,16,6501cb72d45bc7d8"/>
+<approved hash="5,16,9289cb62d45b3040"/>
+<approved hash="5,1,43b5cb0ad5e3e0ac"/>
+<approved hash="5,1,5c71caf2d5dbfea8"/>
+<approved hash="5,1,49f9cb02d45beb50"/>
+<approved hash="5,1,8e51cb32d45b2cc8"/>
+<approved hash="5,1,b595cb0ad423174c"/>
+<approved hash="5,1,2029cb22d4db8220"/>
+<approved hash="5,1,560dcb4ad453f4e4"/>
+<approved hash="5,1,7fddcbead4d3dd14"/>
+<approved hash="5,1,98edcbcad4d33a04"/>
+<approved hash="5,1,bbd9cb02d45b1970"/>
+<approved hash="5,1,a13dcb2ad4d30334"/>
+<approved hash="5,16,43b5cb0ad5e3e0ac"/>
+<approved hash="5,16,5c71caf2d5dbfea8"/>
+<approved hash="5,16,49f9cb02d45beb50"/>
+<approved hash="5,16,8e51cb32d45b2cc8"/>
+<approved hash="5,16,b595cb0ad423174c"/>
+<approved hash="5,16,2029cb22d4db8220"/>
+<approved hash="5,16,560dcb4ad453f4e4"/>
+<approved hash="5,16,7fddcbead4d3dd14"/>
+<approved hash="5,16,98edcbcad4d33a04"/>
+<approved hash="5,16,bbd9cb02d45b1970"/>
+<approved hash="5,16,a13dcb2ad4d30334"/>
 </errors>
 </board>
 </drawing>
