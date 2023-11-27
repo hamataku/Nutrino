@@ -212,14 +212,6 @@
 <smd name="3" x="0.95" y="-1.2" dx="0.5" dy="1" layer="1"/>
 <smd name="4" x="0.95" y="1.2" dx="0.5" dy="1" layer="1"/>
 <smd name="5" x="-0.95" y="1.2" dx="0.5" dy="1" layer="1"/>
-<wire x1="-1.905" y1="1.905" x2="-1.905" y2="-1.905" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="-1.905" x2="1.905" y2="-1.905" width="0.127" layer="21"/>
-<wire x1="1.905" y1="-1.905" x2="1.905" y2="1.905" width="0.127" layer="21"/>
-<wire x1="1.905" y1="1.905" x2="-1.905" y2="1.905" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="1.905" x2="-1.905" y2="-1.905" width="0.0508" layer="39"/>
-<wire x1="-1.905" y1="-1.905" x2="1.905" y2="-1.905" width="0.0508" layer="39"/>
-<wire x1="1.905" y1="-1.905" x2="1.905" y2="1.905" width="0.0508" layer="39"/>
-<wire x1="1.905" y1="1.905" x2="-1.905" y2="1.905" width="0.0508" layer="39"/>
 </package>
 <package name="SOP8">
 <smd name="1" x="0" y="0" dx="2" dy="0.6" layer="1" rot="R90"/>
@@ -4104,16 +4096,16 @@ Source: http://www.hirose.co.jp/cataloge_hp/e24000019.pdf</description>
 <dimension x1="-16" y1="-4" x2="-22.5" y2="-2" x3="26.5" y3="-3" textsize="3.5" layer="47" dtype="vertical"/>
 </package>
 <package name="NUTUBE_6P1_1">
-<pad name="1" x="-16" y="-4" drill="1"/>
-<pad name="2" x="-14" y="-4" drill="1"/>
-<pad name="4" x="-10" y="-4" drill="1"/>
-<pad name="7" x="-4" y="-4" drill="1"/>
-<pad name="8" x="-2" y="-4" drill="1"/>
-<pad name="9" x="0" y="-4" drill="1"/>
-<pad name="10" x="2" y="-4" drill="1"/>
-<pad name="14" x="10" y="-4" drill="1"/>
-<pad name="16" x="14" y="-4" drill="1"/>
-<pad name="17" x="16" y="-4" drill="1"/>
+<pad name="1" x="-16" y="-4" drill="0.85"/>
+<pad name="2" x="-14" y="-4" drill="0.85"/>
+<pad name="4" x="-10" y="-4" drill="0.85"/>
+<pad name="7" x="-4" y="-4" drill="0.85"/>
+<pad name="8" x="-2" y="-4" drill="0.85"/>
+<pad name="9" x="0" y="-4" drill="0.85"/>
+<pad name="10" x="2" y="-4" drill="0.85"/>
+<pad name="14" x="10" y="-4" drill="0.85"/>
+<pad name="16" x="14" y="-4" drill="0.85"/>
+<pad name="17" x="16" y="-4" drill="0.85"/>
 <dimension x1="-16" y1="-4" x2="16" y2="-4" x3="0" y3="-12" textsize="3.5" layer="47" dtype="horizontal"/>
 <wire x1="-22.5" y1="-2" x2="-22.5" y2="14" width="0.127" layer="21"/>
 <wire x1="-22.5" y1="14" x2="22.5" y2="14" width="0.127" layer="21"/>
@@ -4124,13 +4116,13 @@ Source: http://www.hirose.co.jp/cataloge_hp/e24000019.pdf</description>
 <text x="-21.5" y="12" size="1.27" layer="25">&gt;NAME</text>
 <text x="-21.5" y="10" size="1.27" layer="27">&gt;VALUE</text>
 <dimension x1="-16" y1="-4" x2="-22.5" y2="-2" x3="26.5" y3="-3" textsize="3.5" layer="47" dtype="vertical"/>
-<pad name="3" x="-12" y="-4" drill="1"/>
-<pad name="5" x="-8" y="-4" drill="1"/>
-<pad name="6" x="-6" y="-4" drill="1"/>
-<pad name="11" x="4" y="-4" drill="1"/>
-<pad name="12" x="6" y="-4" drill="1"/>
-<pad name="13" x="8" y="-4" drill="1"/>
-<pad name="15" x="12" y="-4" drill="1"/>
+<pad name="3" x="-12" y="-4" drill="0.85"/>
+<pad name="5" x="-8" y="-4" drill="0.85"/>
+<pad name="6" x="-6" y="-4" drill="0.85"/>
+<pad name="11" x="4" y="-4" drill="0.85"/>
+<pad name="12" x="6" y="-4" drill="0.85"/>
+<pad name="13" x="8" y="-4" drill="0.85"/>
+<pad name="15" x="12" y="-4" drill="0.85"/>
 </package>
 </packages>
 <symbols>
@@ -4309,7 +4301,7 @@ Takuo Sawada&lt;br&gt;
 <description>Metric Code Size 2012</description>
 <smd name="K" x="-1.127" y="0" dx="1.016" dy="1.524" layer="1"/>
 <smd name="A" x="1.127" y="0" dx="1.016" dy="1.524" layer="1"/>
-<text x="-1" y="1.4465" size="0.8128" layer="25" font="vector" ratio="10">&gt;NAME</text>
+<text x="-1" y="1.129" size="0.8128" layer="25" font="vector" ratio="10">&gt;NAME</text>
 <text x="-1" y="-1.9" size="0.8128" layer="27" font="vector" ratio="10">&gt;VALUE</text>
 <wire x1="1.016" y1="0.635" x2="-1.016" y2="0.635" width="0.127" layer="21"/>
 <wire x1="-1.016" y1="0.635" x2="-1.016" y2="-0.635" width="0.127" layer="21"/>
@@ -4322,14 +4314,6 @@ Takuo Sawada&lt;br&gt;
 <wire x1="-0.381" y1="0" x2="0.381" y2="0.508" width="0.127" layer="21"/>
 <wire x1="0.381" y1="0.508" x2="0.381" y2="-0.508" width="0.127" layer="21"/>
 <wire x1="0.381" y1="-0.508" x2="-0.381" y2="0" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="0.9525" x2="-1.905" y2="-0.9525" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="-0.9525" x2="1.905" y2="-0.9525" width="0.127" layer="21"/>
-<wire x1="1.905" y1="-0.9525" x2="1.905" y2="0.9525" width="0.127" layer="21"/>
-<wire x1="1.905" y1="0.9525" x2="-1.905" y2="0.9525" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="0.9525" x2="-1.905" y2="-0.9525" width="0.0508" layer="39"/>
-<wire x1="-1.905" y1="-0.9525" x2="1.905" y2="-0.9525" width="0.0508" layer="39"/>
-<wire x1="1.905" y1="-0.9525" x2="1.905" y2="0.9525" width="0.0508" layer="39"/>
-<wire x1="1.905" y1="0.9525" x2="-1.905" y2="0.9525" width="0.0508" layer="39"/>
 </package>
 <package name="D3216">
 <description>Metric Code Size 3216</description>
@@ -4407,24 +4391,6 @@ Takuo Sawada&lt;br&gt;
 <text x="-1.27" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.27" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="D3225">
-<description>Metric Code Size 3225</description>
-<smd name="K" x="-1.4" y="0" dx="1.2" dy="1.2" layer="1"/>
-<smd name="A" x="1.4" y="0" dx="1.2" dy="1.2" layer="1"/>
-<text x="-1.6" y="1.55" size="1.016" layer="25">&gt;NAME</text>
-<text x="-1.6" y="-2.575" size="1.016" layer="27">&gt;VALUE</text>
-<wire x1="-1.475" y1="0.825" x2="1.475" y2="0.825" width="0.127" layer="21"/>
-<wire x1="1.475" y1="0.825" x2="1.475" y2="-0.825" width="0.127" layer="21"/>
-<wire x1="1.475" y1="-0.825" x2="-1.475" y2="-0.825" width="0.127" layer="21"/>
-<wire x1="-1.475" y1="-0.825" x2="-1.475" y2="0.825" width="0.127" layer="21"/>
-<wire x1="1.27" y1="0" x2="-0.635" y2="0" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="0" x2="-1.27" y2="0" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="0.635" x2="-0.635" y2="0" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="0" x2="-0.635" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="0" x2="0.381" y2="0.635" width="0.127" layer="21"/>
-<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="0.381" y1="-0.635" x2="-0.635" y2="0" width="0.127" layer="21"/>
-</package>
 <package name="OSI5XNE3E1E">
 <circle x="0" y="0" radius="2.75" width="0.127" layer="51"/>
 <circle x="0" y="0" radius="4" width="0.127" layer="21"/>
@@ -4458,6 +4424,24 @@ Takuo Sawada&lt;br&gt;
 <smd name="A" x="-6.605" y="-1.15" dx="5" dy="2" layer="1"/>
 <smd name="K" x="6.605" y="1.15" dx="5" dy="2" layer="1"/>
 <smd name="SHELL" x="0" y="0" dx="7" dy="7" layer="1" roundness="100"/>
+</package>
+<package name="D3225">
+<description>Metric Code Size 3225</description>
+<smd name="K" x="-1.4" y="0" dx="1.2" dy="1.2" layer="1"/>
+<smd name="A" x="1.4" y="0" dx="1.2" dy="1.2" layer="1"/>
+<text x="-1.6" y="1.55" size="1.016" layer="25">&gt;NAME</text>
+<text x="-1.6" y="-2.575" size="1.016" layer="27">&gt;VALUE</text>
+<wire x1="-1.475" y1="0.825" x2="1.475" y2="0.825" width="0.127" layer="51"/>
+<wire x1="1.475" y1="0.825" x2="1.475" y2="-0.825" width="0.127" layer="51"/>
+<wire x1="1.475" y1="-0.825" x2="-1.475" y2="-0.825" width="0.127" layer="51"/>
+<wire x1="-1.475" y1="-0.825" x2="-1.475" y2="0.825" width="0.127" layer="51"/>
+<wire x1="1.27" y1="0" x2="-0.635" y2="0" width="0.127" layer="51"/>
+<wire x1="-0.635" y1="0" x2="-1.27" y2="0" width="0.127" layer="51"/>
+<wire x1="-0.635" y1="0.635" x2="-0.635" y2="0" width="0.127" layer="51"/>
+<wire x1="-0.635" y1="0" x2="-0.635" y2="-0.635" width="0.127" layer="51"/>
+<wire x1="-0.635" y1="0" x2="0.381" y2="0.635" width="0.127" layer="51"/>
+<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="0.127" layer="51"/>
+<wire x1="0.381" y1="-0.635" x2="-0.635" y2="0" width="0.127" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -4837,7 +4821,7 @@ Takuo Sawada&lt;br&gt;
 <part name="C35" library="Passive_Robotech" deviceset="C" device="-2012" value="0.0022u"/>
 <part name="SUPPLY27" library="Supply_Robotech" deviceset="GND" device=""/>
 <part name="R34" library="Passive_Robotech" deviceset="R" device="-2012" value="100k"/>
-<part name="VR5" library="Passive_Robotech" deviceset="VR2C" device=""/>
+<part name="VR5" library="Passive_Robotech" deviceset="VR2C" device="" value="100K"/>
 <part name="C36" library="Passive_Robotech" deviceset="C" device="-2012" value="10p"/>
 <part name="R26" library="Passive_Robotech" deviceset="R" device="-4532" value="10"/>
 <part name="C37" library="Passive_Robotech" deviceset="CC" device="-2.5-7" value="220u"/>
