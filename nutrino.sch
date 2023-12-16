@@ -4821,7 +4821,7 @@ Takuo Sawada&lt;br&gt;
 <part name="C35" library="Passive_Robotech" deviceset="C" device="-2012" value="0.0022u"/>
 <part name="SUPPLY27" library="Supply_Robotech" deviceset="GND" device=""/>
 <part name="R34" library="Passive_Robotech" deviceset="R" device="-2012" value="100k"/>
-<part name="VR5" library="Passive_Robotech" deviceset="VR2C" device="" value="100K"/>
+<part name="VR5" library="Passive_Robotech" deviceset="VR2C" device="" value="50K"/>
 <part name="C36" library="Passive_Robotech" deviceset="C" device="-2012" value="10p"/>
 <part name="R26" library="Passive_Robotech" deviceset="R" device="-4532" value="10"/>
 <part name="C37" library="Passive_Robotech" deviceset="CC" device="-2.5-7" value="220u"/>
@@ -4898,8 +4898,8 @@ Takuo Sawada&lt;br&gt;
 <instance part="SUPPLY1" gate="GND" x="88.9" y="25.4" smashed="yes">
 <attribute name="VALUE" x="86.995" y="22.225" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY2" gate="GND" x="45.72" y="50.8" smashed="yes">
-<attribute name="VALUE" x="46.355" y="50.165" size="1.778" layer="96"/>
+<instance part="SUPPLY2" gate="GND" x="43.18" y="50.8" smashed="yes">
+<attribute name="VALUE" x="43.815" y="50.165" size="1.778" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="30.48" y="63.5" smashed="yes">
 <attribute name="NAME" x="31.496" y="64.135" size="1.778" layer="95"/>
@@ -5263,11 +5263,11 @@ Takuo Sawada&lt;br&gt;
 </instance>
 <instance part="IC4" gate="G$2" x="365.76" y="154.94" smashed="yes" rot="MR180">
 <attribute name="NAME" x="368.3" y="151.765" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="368.3" y="160.02" size="1.778" layer="96" rot="MR180"/>
+<attribute name="VALUE" x="363.22" y="160.02" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="IC4" gate="G$3" x="365.76" y="96.52" smashed="yes" rot="MR180">
 <attribute name="NAME" x="368.3" y="93.345" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="368.3" y="101.6" size="1.778" layer="96" rot="MR180"/>
+<attribute name="VALUE" x="363.22" y="101.6" size="1.778" layer="96" rot="MR180"/>
 </instance>
 <instance part="IC4" gate="G$1" x="345.44" y="43.18" smashed="yes">
 <attribute name="NAME" x="342.9" y="38.1" size="1.778" layer="95" rot="R90"/>
@@ -5315,23 +5315,23 @@ Takuo Sawada&lt;br&gt;
 </instance>
 <instance part="VR5" gate="G$1" x="360.68" y="172.72" smashed="yes">
 <attribute name="NAME" x="356.87" y="174.2186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="356.87" y="161.798" size="1.778" layer="96"/>
+<attribute name="VALUE" x="356.87" y="177.038" size="1.778" layer="96"/>
 </instance>
 <instance part="VR5" gate="G$2" x="360.68" y="114.3" smashed="yes">
 <attribute name="NAME" x="356.87" y="115.7986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="356.87" y="103.378" size="1.778" layer="96"/>
+<attribute name="VALUE" x="356.87" y="118.618" size="1.778" layer="96"/>
 </instance>
 <instance part="C36" gate="G$1" x="365.76" y="167.64" smashed="yes" rot="R90">
 <attribute name="NAME" x="372.364" y="169.545" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="372.364" y="166.751" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R26" gate="G$1" x="381" y="154.94" smashed="yes">
-<attribute name="NAME" x="377.19" y="156.4386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="377.19" y="151.638" size="1.778" layer="96"/>
+<attribute name="NAME" x="379.73" y="156.4386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="379.73" y="151.638" size="1.778" layer="96"/>
 </instance>
 <instance part="C37" gate="G$1" x="388.62" y="154.94" smashed="yes" rot="R90">
 <attribute name="NAME" x="392.684" y="159.385" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="395.224" y="151.511" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="392.684" y="151.511" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R27" gate="G$1" x="398.78" y="149.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="397.2814" y="146.05" size="1.778" layer="95" rot="R90"/>
@@ -5368,12 +5368,12 @@ Takuo Sawada&lt;br&gt;
 <attribute name="VALUE" x="372.364" y="108.331" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R31" gate="G$1" x="381" y="96.52" smashed="yes">
-<attribute name="NAME" x="377.19" y="98.0186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="377.19" y="93.218" size="1.778" layer="96"/>
+<attribute name="NAME" x="379.73" y="98.0186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="379.73" y="93.218" size="1.778" layer="96"/>
 </instance>
 <instance part="C41" gate="G$1" x="388.62" y="96.52" smashed="yes" rot="R90">
 <attribute name="NAME" x="392.684" y="100.965" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="395.224" y="93.091" size="1.778" layer="96" rot="R180"/>
+<attribute name="VALUE" x="392.684" y="93.091" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R32" gate="G$1" x="398.78" y="91.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="397.2814" y="87.63" size="1.778" layer="95" rot="R90"/>
@@ -5507,6 +5507,7 @@ Takuo Sawada&lt;br&gt;
 <segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
+<wire x1="43.18" y1="53.34" x2="45.72" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>

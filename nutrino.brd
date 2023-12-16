@@ -1371,7 +1371,7 @@ Takuo Sawada&lt;br&gt;
 <attribute name="NAME" x="21.59" y="0.762" size="1.27" layer="25" font="vector" rot="R90"/>
 <attribute name="VALUE" x="28.956" y="1.524" size="1.27" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="VR5" library="Passive_Robotech" package="VR2C" value="100K" x="58.086" y="32.004" smashed="yes" rot="R90">
+<element name="VR5" library="Passive_Robotech" package="VR2C" value="50K" x="58.086" y="32.004" smashed="yes" rot="R90">
 <attribute name="NAME" x="56.816" y="30.734" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="63.674" y="32.512" size="1.27" layer="27" rot="R90"/>
 </element>
